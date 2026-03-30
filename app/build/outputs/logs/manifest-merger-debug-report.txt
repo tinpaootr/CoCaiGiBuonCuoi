@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\ADMIN\AndroidStudioProjects\CoCaiGiBuonCuoi\app\src\main\AndroidManifest.xml:2:1-36:12
-INJECTED from C:\Users\ADMIN\AndroidStudioProjects\CoCaiGiBuonCuoi\app\src\main\AndroidManifest.xml:2:1-36:12
-INJECTED from C:\Users\ADMIN\AndroidStudioProjects\CoCaiGiBuonCuoi\app\src\main\AndroidManifest.xml:2:1-36:12
-INJECTED from C:\Users\ADMIN\AndroidStudioProjects\CoCaiGiBuonCuoi\app\src\main\AndroidManifest.xml:2:1-36:12
+ADDED from C:\Users\ADMIN\AndroidStudioProjects\CoCaiGiBuonCuoi\app\src\main\AndroidManifest.xml:2:1-39:12
+INJECTED from C:\Users\ADMIN\AndroidStudioProjects\CoCaiGiBuonCuoi\app\src\main\AndroidManifest.xml:2:1-39:12
+INJECTED from C:\Users\ADMIN\AndroidStudioProjects\CoCaiGiBuonCuoi\app\src\main\AndroidManifest.xml:2:1-39:12
+INJECTED from C:\Users\ADMIN\AndroidStudioProjects\CoCaiGiBuonCuoi\app\src\main\AndroidManifest.xml:2:1-39:12
 MERGED from [com.google.android.material:material:1.11.0] C:\Users\ADMIN\.gradle\caches\transforms-3\2b09c2cd4192fe4b7b686a651ae8eff3\transformed\material-1.11.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\ADMIN\.gradle\caches\transforms-3\80bc2211690f56e6063d66d7e4cf0117\transformed\constraintlayout-2.1.4\AndroidManifest.xml:2:1-11:12
 MERGED from [com.tbuonomo:dotsindicator:5.0] C:\Users\ADMIN\.gradle\caches\transforms-3\72073f1216f69654e822acac5255cc9b\transformed\jetified-dotsindicator-5.0-debug\AndroidManifest.xml:2:1-9:12
@@ -86,8 +86,8 @@ MERGED from [com.getkeepsafe.relinker:relinker:1.4.5] C:\Users\ADMIN\.gradle\cac
 	xmlns:android
 		ADDED from C:\Users\ADMIN\AndroidStudioProjects\CoCaiGiBuonCuoi\app\src\main\AndroidManifest.xml:2:11-69
 application
-ADDED from C:\Users\ADMIN\AndroidStudioProjects\CoCaiGiBuonCuoi\app\src\main\AndroidManifest.xml:5:5-34:19
-INJECTED from C:\Users\ADMIN\AndroidStudioProjects\CoCaiGiBuonCuoi\app\src\main\AndroidManifest.xml:5:5-34:19
+ADDED from C:\Users\ADMIN\AndroidStudioProjects\CoCaiGiBuonCuoi\app\src\main\AndroidManifest.xml:5:5-37:19
+INJECTED from C:\Users\ADMIN\AndroidStudioProjects\CoCaiGiBuonCuoi\app\src\main\AndroidManifest.xml:5:5-37:19
 MERGED from [com.google.android.material:material:1.11.0] C:\Users\ADMIN\.gradle\caches\transforms-3\2b09c2cd4192fe4b7b686a651ae8eff3\transformed\material-1.11.0\AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.material:material:1.11.0] C:\Users\ADMIN\.gradle\caches\transforms-3\2b09c2cd4192fe4b7b686a651ae8eff3\transformed\material-1.11.0\AndroidManifest.xml:22:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\ADMIN\.gradle\caches\transforms-3\80bc2211690f56e6063d66d7e4cf0117\transformed\constraintlayout-2.1.4\AndroidManifest.xml:9:5-20
@@ -180,6 +180,18 @@ activity#com.sagarkhurana.quizforfun.RegisterActivity
 ADDED from C:\Users\ADMIN\AndroidStudioProjects\CoCaiGiBuonCuoi\app\src\main\AndroidManifest.xml:32:9-54
 	android:name
 		ADDED from C:\Users\ADMIN\AndroidStudioProjects\CoCaiGiBuonCuoi\app\src\main\AndroidManifest.xml:32:19-51
+activity#com.sagarkhurana.quizforfun.QuizDetailActivity
+ADDED from C:\Users\ADMIN\AndroidStudioProjects\CoCaiGiBuonCuoi\app\src\main\AndroidManifest.xml:33:9-56
+	android:name
+		ADDED from C:\Users\ADMIN\AndroidStudioProjects\CoCaiGiBuonCuoi\app\src\main\AndroidManifest.xml:33:19-53
+activity#com.sagarkhurana.quizforfun.QuickMathActivity
+ADDED from C:\Users\ADMIN\AndroidStudioProjects\CoCaiGiBuonCuoi\app\src\main\AndroidManifest.xml:34:9-55
+	android:name
+		ADDED from C:\Users\ADMIN\AndroidStudioProjects\CoCaiGiBuonCuoi\app\src\main\AndroidManifest.xml:34:19-52
+activity#com.sagarkhurana.quizforfun.SurvivalActivity
+ADDED from C:\Users\ADMIN\AndroidStudioProjects\CoCaiGiBuonCuoi\app\src\main\AndroidManifest.xml:35:9-54
+	android:name
+		ADDED from C:\Users\ADMIN\AndroidStudioProjects\CoCaiGiBuonCuoi\app\src\main\AndroidManifest.xml:35:19-51
 uses-sdk
 INJECTED from C:\Users\ADMIN\AndroidStudioProjects\CoCaiGiBuonCuoi\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\Users\ADMIN\AndroidStudioProjects\CoCaiGiBuonCuoi\app\src\main\AndroidManifest.xml

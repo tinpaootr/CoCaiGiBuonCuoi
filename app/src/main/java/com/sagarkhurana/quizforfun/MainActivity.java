@@ -20,6 +20,8 @@ public class MainActivity extends AppCompatActivity {
 
         TextView tvUsername = findViewById(R.id.tvUsernameHome);
         CardView cvStartQuiz = findViewById(R.id.cvStartQuiz);
+        CardView cvQuickMath = findViewById(R.id.cvQuickMath);
+        CardView cvSurvival = findViewById(R.id.cvSurvival);
         CardView cvRule = findViewById(R.id.cvRule);
         CardView cvHistory = findViewById(R.id.cvHistory);
         CardView cvEditPassword = findViewById(R.id.cvEditPassword);
@@ -33,6 +35,20 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(MainActivity.this,QuizOptionActivity.class));
+            }
+        });
+
+        cvQuickMath.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MainActivity.this, QuickMathActivity.class));
+            }
+        });
+
+        cvSurvival.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MainActivity.this, SurvivalActivity.class));
             }
         });
 
@@ -66,11 +82,5 @@ public class MainActivity extends AppCompatActivity {
                 finish();
             }
         });
-
-
-
-
     }
-
-
 }

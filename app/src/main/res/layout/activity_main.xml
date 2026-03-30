@@ -60,8 +60,8 @@
             android:layout_width="0dp"
             android:layout_height="@dimen/home_card_height"
             android:layout_marginTop="16dp"
-            android:layout_marginEnd="24dp"
-            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="12dp"
+            app:layout_constraintEnd_toStartOf="@+id/cvQuickMath"
             app:layout_constraintStart_toStartOf="@+id/textView4"
             app:layout_constraintTop_toBottomOf="@+id/textView4">
 
@@ -74,10 +74,11 @@
                     android:id="@+id/imageView2"
                     android:layout_width="@dimen/home_image_view_size"
                     android:layout_height="@dimen/home_image_view_size"
-                    android:layout_marginStart="24dp"
                     app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.35"
                     app:srcCompat="@drawable/quiz" />
 
                 <TextView
@@ -85,11 +86,91 @@
                     style="@style/categoryHeadingTextStyle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="24dp"
                     android:text="@string/start_quiz"
-                    app:layout_constraintBottom_toBottomOf="@+id/imageView2"
-                    app:layout_constraintStart_toEndOf="@+id/imageView2"
-                    app:layout_constraintTop_toTopOf="@+id/imageView2" />
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvQuickMath"
+            style="@style/cardViewStyle"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/home_card_height"
+            android:layout_marginEnd="24dp"
+            app:layout_constraintBottom_toBottomOf="@+id/cvStartQuiz"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/cvStartQuiz"
+            app:layout_constraintTop_toTopOf="@+id/cvStartQuiz">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <ImageView
+                    android:id="@+id/imageViewQuickMath"
+                    android:layout_width="@dimen/home_image_view_size"
+                    android:layout_height="@dimen/home_image_view_size"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.35"
+                    app:srcCompat="@drawable/blackboard" />
+
+                <TextView
+                    style="@style/categoryHeadingTextStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/quick_math"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/imageViewQuickMath" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvSurvival"
+            style="@style/cardViewStyle"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/home_card_height"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="12dp"
+            app:layout_constraintEnd_toStartOf="@+id/cvRule"
+            app:layout_constraintStart_toStartOf="@+id/cvStartQuiz"
+            app:layout_constraintTop_toBottomOf="@+id/cvStartQuiz">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <ImageView
+                    android:id="@+id/imageViewSurvival"
+                    android:layout_width="@dimen/home_image_view_size"
+                    android:layout_height="@dimen/home_image_view_size"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.35"
+                    app:srcCompat="@drawable/icon" />
+
+                <TextView
+                    style="@style/categoryHeadingTextStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/survival_mode"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/imageViewSurvival" />
             </androidx.constraintlayout.widget.ConstraintLayout>
 
         </androidx.cardview.widget.CardView>
@@ -99,11 +180,10 @@
             style="@style/cardViewStyle"
             android:layout_width="0dp"
             android:layout_height="@dimen/home_card_height"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="16dp"
-            app:layout_constraintEnd_toStartOf="@+id/cvHistory"
-            app:layout_constraintStart_toStartOf="@+id/cvStartQuiz"
-            app:layout_constraintTop_toBottomOf="@+id/cvStartQuiz">
+            app:layout_constraintBottom_toBottomOf="@+id/cvSurvival"
+            app:layout_constraintEnd_toEndOf="@+id/cvQuickMath"
+            app:layout_constraintStart_toEndOf="@+id/cvSurvival"
+            app:layout_constraintTop_toTopOf="@+id/cvSurvival">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
@@ -139,10 +219,11 @@
             android:layout_width="0dp"
             style="@style/cardViewStyle"
             android:layout_height="@dimen/home_card_height"
-            app:layout_constraintBottom_toBottomOf="@+id/cvRule"
-            app:layout_constraintEnd_toEndOf="@+id/cvStartQuiz"
-            app:layout_constraintStart_toEndOf="@+id/cvRule"
-            app:layout_constraintTop_toTopOf="@+id/cvRule" >
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="12dp"
+            app:layout_constraintEnd_toStartOf="@+id/cvEditPassword"
+            app:layout_constraintStart_toStartOf="@+id/cvSurvival"
+            app:layout_constraintTop_toBottomOf="@+id/cvSurvival" >
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
@@ -179,10 +260,10 @@
             android:layout_width="0dp"
             android:layout_height="@dimen/home_card_height"
             style="@style/cardViewStyle"
-            android:layout_marginTop="16dp"
+            app:layout_constraintBottom_toBottomOf="@+id/cvHistory"
             app:layout_constraintEnd_toEndOf="@+id/cvRule"
-            app:layout_constraintStart_toStartOf="@+id/cvRule"
-            app:layout_constraintTop_toBottomOf="@+id/cvRule" >
+            app:layout_constraintStart_toEndOf="@+id/cvHistory"
+            app:layout_constraintTop_toTopOf="@+id/cvHistory" >
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
@@ -219,10 +300,10 @@
             android:layout_width="0dp"
             style="@style/cardViewStyle"
             android:layout_height="@dimen/home_card_height"
-            app:layout_constraintBottom_toBottomOf="@+id/cvEditPassword"
+            android:layout_marginTop="16dp"
             app:layout_constraintEnd_toEndOf="@+id/cvHistory"
             app:layout_constraintStart_toStartOf="@+id/cvHistory"
-            app:layout_constraintTop_toTopOf="@+id/cvEditPassword" >
+            app:layout_constraintTop_toBottomOf="@+id/cvHistory" >
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"

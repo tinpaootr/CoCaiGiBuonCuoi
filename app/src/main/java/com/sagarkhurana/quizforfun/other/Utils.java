@@ -216,4 +216,12 @@ public class Utils {
         return questionsMap;
     }
 
+    public static Map<String, Map<String, Boolean>> getAllQuestions() {
+        HashMap<String, Map<String, Boolean>> allQuestions = new HashMap<>();
+        allQuestions.putAll(getLiteratureQuestions());
+        allQuestions.putAll(getGeographyQuestions());
+        allQuestions.putAll(getHistoryQuestions());
+        return allQuestions;
+    }
+
 }

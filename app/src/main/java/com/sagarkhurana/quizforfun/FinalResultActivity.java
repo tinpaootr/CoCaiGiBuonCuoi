@@ -32,6 +32,7 @@ public class FinalResultActivity extends AppCompatActivity {
         int incorrectAnswer = intent.getIntExtra(Constants.INCORRECT, 0);
         String subject = intent.getStringExtra(Constants.SUBJECT);
         String email = SharedPref.getInstance().getUser(this).getEmail();
+        String questionsJson = intent.getStringExtra(Constants.QUESTIONS_DETAILS);
         int earnedPoints = (correctAnswer * Constants.CORRECT_POINT) - (incorrectAnswer * Constants.INCORRECT_POINT);
 
         tvSubject = findViewById(R.id.textView16);
@@ -67,6 +68,7 @@ public class FinalResultActivity extends AppCompatActivity {
                 earnedPoints,
                 email
         );
+        attempt.setQuestionsJson(questionsJson);
 
         getOverAllPoints(attempt);
     }

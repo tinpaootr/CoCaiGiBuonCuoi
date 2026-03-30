@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".SurvivalActivity">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="40dp">
+
+            <ImageView
+                android:id="@+id/ivBackSurvival"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="24dp"
+                android:background="?selectableItemBackgroundBorderless"
+                android:padding="4dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/arrow"
+                app:tint="@color/black" />
+
+            <TextView
+                android:id="@+id/tvSurvivalTitle"
+                style="@style/titleTextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:text="@string/survival_mode"
+                app:layout_constraintBottom_toBottomOf="@+id/ivBackSurvival"
+                app:layout_constraintStart_toEndOf="@+id/ivBackSurvival"
+                app:layout_constraintTop_toTopOf="@+id/ivBackSurvival" />
+
+            <TextView
+                android:id="@+id/tvLivesSurvival"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="24dp"
+                android:text="Mạng: 3"
+                android:textColor="#F44336"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/tvSurvivalTitle"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/tvSurvivalTitle" />
+
+            <com.google.android.material.progressindicator.LinearProgressIndicator
+                android:id="@+id/pbSurvival"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="24dp"
+                app:indicatorColor="@color/peach"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvSurvivalTitle"
+                app:trackColor="#E0E0E0"
+                app:trackThickness="8dp"
+                app:trackCornerRadius="4dp" />
+
+            <TextView
+                android:id="@+id/tvScoreSurvival"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Điểm: 0"
+                android:textColor="@color/peach"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/pbSurvival"
+                app:layout_constraintTop_toBottomOf="@+id/pbSurvival" />
+
+            <TextView
+                android:id="@+id/tvQuestionSurvival"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="32dp"
+                android:layout_marginEnd="24dp"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="28sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvScoreSurvival"
+                tools:text="Câu hỏi sẽ hiển thị ở đây?" />
+
+            <LinearLayout
+                android:id="@+id/llOptions"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="@+id/tvQuestionSurvival"
+                app:layout_constraintStart_toStartOf="@+id/tvQuestionSurvival"
+                app:layout_constraintTop_toBottomOf="@+id/tvQuestionSurvival">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnOption1"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp"
+                    android:padding="16dp"
+                    android:text="Đáp án A"
+                    android:textAllCaps="false"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    app:cornerRadius="12dp"
+                    app:strokeColor="@color/peach" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnOption2"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp"
+                    android:padding="16dp"
+                    android:text="Đáp án B"
+                    android:textAllCaps="false"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    app:cornerRadius="12dp"
+                    app:strokeColor="@color/peach" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnOption3"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp"
+                    android:padding="16dp"
+                    android:text="Đáp án C"
+                    android:textAllCaps="false"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    app:cornerRadius="12dp"
+                    app:strokeColor="@color/peach" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnOption4"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp"
+                    android:text="Đáp án D"
+                    android:textAllCaps="false"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    app:cornerRadius="12dp"
+                    app:strokeColor="@color/peach" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="@+id/llOptions"
+                app:layout_constraintStart_toStartOf="@+id/llOptions"
+                app:layout_constraintTop_toBottomOf="@+id/llOptions">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn5050"
+                    style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:layout_weight="1"
+                    android:backgroundTint="#FFC107"
+                    android:padding="12dp"
+                    android:text="@string/lifeline_5050"
+                    android:textColor="@color/white"
+                    app:cornerRadius="12dp" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnSkip"
+                    style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_weight="1"
+                    android:backgroundTint="#2196F3"
+                    android:padding="12dp"
+                    android:text="@string/lifeline_skip"
+                    android:textColor="@color/white"
+                    app:cornerRadius="12dp" />
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

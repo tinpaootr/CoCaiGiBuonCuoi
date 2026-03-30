@@ -65,4 +65,15 @@
     <string name="rules4_description">
         Kết quả của bạn sẽ được lưu lại trong phần lịch sử.
     </string>
+    <string name="true_false_quiz">Đúng hay Sai</string>
+    <string name="quick_math">Toán nhanh</string>
+    <string name="true_text">Đúng</string>
+    <string name="false_text">Sai</string>
+    <string name="score_text">Điểm: %d</string>
+    <string name="time_up">Hết giờ!</string>
+    <string name="survival_mode">Sinh tồn</string>
+    <string name="lives_text">Mạng: %d</string>
+    <string name="lifeline_5050">50/50</string>
+    <string name="lifeline_skip">Đổi câu</string>
+    <string name="survival_game_over">Kết thúc hành trình!</string>
 </resources>

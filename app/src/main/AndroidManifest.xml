@@ -30,6 +30,9 @@
         <activity android:name=".RuleActivity" />
         <activity android:name=".QuizOptionActivity" />
         <activity android:name=".RegisterActivity" />
+        <activity android:name=".QuizDetailActivity" />
+        <activity android:name=".QuickMathActivity" />
+        <activity android:name=".SurvivalActivity" />
 
     </application>
 

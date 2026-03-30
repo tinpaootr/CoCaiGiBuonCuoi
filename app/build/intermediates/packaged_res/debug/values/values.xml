@@ -35,6 +35,7 @@
     <string name="email_cannot_empty">Email không được để trống</string>
     <string name="email_not_valid">Email không hợp lệ</string>
     <string name="enter_answer">Nhập câu trả lời</string>
+    <string name="false_text">Sai</string>
     <string name="final_result">Kết quả cuối cùng</string>
     <string name="finish">Kết thúc</string>
     <string name="geography">Địa lý</string>
@@ -43,8 +44,11 @@
     <string name="history_quiz">Đố vui Lịch sử</string>
     <string name="history_subject">Lịch sử</string>
     <string name="incorrect">Sai :</string>
+    <string name="lifeline_5050">50/50</string>
+    <string name="lifeline_skip">Đổi câu</string>
     <string name="literature">Văn học</string>
     <string name="literature_quiz">Đố vui Văn học</string>
+    <string name="lives_text">Mạng: %d</string>
     <string name="login">Đăng nhập</string>
     <string name="login_to_continue">Đăng nhập để tiếp tục</string>
     <string name="logout">Đăng xuất</string>
@@ -61,6 +65,7 @@
     <string name="password">Mật khẩu</string>
     <string name="password_cannot_empty">Mật khẩu không được để trống</string>
     <string name="password_must_be_same">Mật khẩu phải trùng khớp</string>
+    <string name="quick_math">Toán nhanh</string>
     <string name="quiz_option">Tùy chọn bài thi</string>
     <string name="register">Đăng ký</string>
     <string name="rule">Quy định</string>
@@ -77,11 +82,17 @@
         Kết quả của bạn sẽ được lưu lại trong phần lịch sử.
     </string>
     <string name="save_password">Lưu mật khẩu</string>
+    <string name="score_text">Điểm: %d</string>
     <string name="sign_up">ĐĂNG KÝ</string>
     <string name="start_again">Chơi lại!</string>
     <string name="start_quiz">Bắt đầu</string>
     <string name="subject">Môn học :</string>
+    <string name="survival_game_over">Kết thúc hành trình!</string>
+    <string name="survival_mode">Sinh tồn</string>
+    <string name="time_up">Hết giờ!</string>
     <string name="total_questions">Tổng số câu hỏi :</string>
+    <string name="true_false_quiz">Đúng hay Sai</string>
+    <string name="true_text">Đúng</string>
     <string name="username">Tên đăng nhập</string>
     <string name="username_cannot_empty">Tên đăng nhập không được để trống</string>
     <string name="welcome_back">Chào mừng trở lại!</string>

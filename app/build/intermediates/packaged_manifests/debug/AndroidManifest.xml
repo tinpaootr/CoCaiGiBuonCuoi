@@ -44,6 +44,9 @@
         <activity android:name="com.sagarkhurana.quizforfun.RuleActivity" />
         <activity android:name="com.sagarkhurana.quizforfun.QuizOptionActivity" />
         <activity android:name="com.sagarkhurana.quizforfun.RegisterActivity" />
+        <activity android:name="com.sagarkhurana.quizforfun.QuizDetailActivity" />
+        <activity android:name="com.sagarkhurana.quizforfun.QuickMathActivity" />
+        <activity android:name="com.sagarkhurana.quizforfun.SurvivalActivity" />
 
         <service
             android:name="androidx.room.MultiInstanceInvalidationService"
