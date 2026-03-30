@@ -1,32 +1,47 @@
 package com.sagarkhurana.quizforfun;
 
+import androidx.activity.OnBackPressedCallback;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.CountDownTimer;
 import android.view.View;
 import android.widget.Button;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import com.google.android.material.progressindicator.LinearProgressIndicator;
+import com.google.gson.Gson;
+import com.sagarkhurana.quizforfun.data.QuestionResult;
 import com.sagarkhurana.quizforfun.other.Constants;
 import com.sagarkhurana.quizforfun.other.Utils;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 import java.util.Map;
 
 public class GeographyOrLiteratureQuizActivity extends AppCompatActivity {
 
     private int currentQuestionIndex = 0;
-    private TextView tvQuestion, tvQuestionNumber;
+    private TextView tvQuestion, tvQuestionNumber, tvTimer;
     private Button btnNext;
     private RadioGroup radioGroup;
     private RadioButton radioButton1, radioButton2, radioButton3, radioButton4;
     private List<String> questions;
     private int correctQuestion = 0;
     private Map<String, Map<String, Boolean>> questionsAnswerMap;
+
+    private LinearProgressIndicator progressBar;
+    private CountDownTimer countDownTimer;
+    private static final long COUNTDOWN_IN_MILLIS = 20000; // 20 seconds
+    
+    private List<QuestionResult> questionResults = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,52 +70,106 @@ public class GeographyOrLiteratureQuizActivity extends AppCompatActivity {
         tvQuestionNumber = findViewById(R.id.textView18);
         btnNext = findViewById(R.id.btnNextQuestionLiteratureAndGeography);
         radioGroup = findViewById(R.id.radioGroup);
+        tvTimer = findViewById(R.id.tvTimerGeographyOrLiterature);
+        progressBar = findViewById(R.id.progressBarGeographyOrLiterature);
+
+        progressBar.setMax(Constants.QUESTION_SHOWING);
 
         radioButton1 = findViewById(R.id.radioButton1);
         radioButton2 = findViewById(R.id.radioButton2);
         radioButton3 = findViewById(R.id.radioButton3);
         radioButton4 = findViewById(R.id.radioButton4);
 
-        findViewById(R.id.btnNextQuestionLiteratureAndGeography).setOnClickListener(new View.OnClickListener() {
+        btnNext.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
-                int checkedId = radioGroup.getCheckedRadioButtonId();
-                if (checkedId == -1) {
-                    return;
-                }
-                RadioButton radioButton = findViewById(checkedId);
-                boolean answer = questionsAnswerMap.get(questions.get(currentQuestionIndex)).get(radioButton.getText().toString());
-
-                if (answer) {
-                    correctQuestion++;
-                }
-
-                currentQuestionIndex++;
-
-                if (currentQuestionIndex < questions.size()) {
-                    displayNextQuestions();
-                } else {
-                    Intent intentResult = new Intent(GeographyOrLiteratureQuizActivity.this, FinalResultActivity.class);
-                    intentResult.putExtra(Constants.SUBJECT, subject);
-                    intentResult.putExtra(Constants.CORRECT, correctQuestion);
-                    intentResult.putExtra(Constants.INCORRECT, questions.size() - correctQuestion);
-                    intentResult.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
-                    startActivity(intentResult);
-                    finish();
-                }
-
+                checkAnswerAndNext(subject);
             }
         });
 
         findViewById(R.id.imageViewStartQuizGeographyOrLiterature).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                finish();
+                showExitConfirmationDialog();
+            }
+        });
+
+        getOnBackPressedDispatcher().addCallback(this, new OnBackPressedCallback(true) {
+            @Override
+            public void handleOnBackPressed() {
+                showExitConfirmationDialog();
             }
         });
 
         displayData();
+    }
+
+    private void checkAnswerAndNext(String subject) {
+        int checkedId = radioGroup.getCheckedRadioButtonId();
+        if (checkedId == -1) {
+            Toast.makeText(this, "Vui lòng chọn một đáp án!", Toast.LENGTH_SHORT).show();
+            return;
+        }
+        RadioButton radioButton = findViewById(checkedId);
+        String userAnswer = radioButton.getText().toString();
+        
+        Map<String, Boolean> answersMap = questionsAnswerMap.get(questions.get(currentQuestionIndex));
+        String correctAnswer = "";
+        for (Map.Entry<String, Boolean> entry : answersMap.entrySet()) {
+            if (entry.getValue()) {
+                correctAnswer = entry.getKey();
+                break;
+            }
+        }
+        
+        boolean isCorrect = answersMap.get(userAnswer);
+
+        if (isCorrect) {
+            correctQuestion++;
+        }
+        
+        questionResults.add(new QuestionResult(questions.get(currentQuestionIndex), correctAnswer, userAnswer, isCorrect));
+
+        goToNextQuestion(subject);
+    }
+
+    private void goToNextQuestion(String subject) {
+        if (countDownTimer != null) countDownTimer.cancel();
+        currentQuestionIndex++;
+
+        if (currentQuestionIndex < questions.size()) {
+            displayNextQuestions();
+        } else {
+            finishQuiz(subject);
+        }
+    }
+
+    private void finishQuiz(String subject) {
+        Intent intentResult = new Intent(GeographyOrLiteratureQuizActivity.this, FinalResultActivity.class);
+        intentResult.putExtra(Constants.SUBJECT, subject);
+        intentResult.putExtra(Constants.CORRECT, correctQuestion);
+        intentResult.putExtra(Constants.INCORRECT, questions.size() - correctQuestion);
+        
+        String questionsJson = new Gson().toJson(questionResults);
+        intentResult.putExtra(Constants.QUESTIONS_DETAILS, questionsJson);
+        
+        intentResult.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+        startActivity(intentResult);
+        finish();
+    }
+
+    private void showExitConfirmationDialog() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setTitle("Thoát bài thi?");
+        builder.setMessage("Bạn có chắc chắn muốn thoát không? Tiến trình làm bài sẽ bị mất.");
+        builder.setPositiveButton("Thoát", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                finish();
+            }
+        });
+        builder.setNegativeButton("Tiếp tục làm bài", null);
+        builder.show();
     }
 
     private void displayNextQuestions() {
@@ -108,17 +177,20 @@ public class GeographyOrLiteratureQuizActivity extends AppCompatActivity {
         setAnswersToRadioButton();
         tvQuestion.setText(questions.get(currentQuestionIndex));
         tvQuestionNumber.setText("Câu hỏi hiện tại: " + (currentQuestionIndex + 1));
+        progressBar.setProgress(currentQuestionIndex + 1);
 
         if (currentQuestionIndex == questions.size() - 1) {
             btnNext.setText(getText(R.string.finish));
         }
+        startCountDown();
     }
 
     private void displayData() {
         tvQuestion.setText(questions.get(currentQuestionIndex));
         tvQuestionNumber.setText("Câu hỏi hiện tại: " + (currentQuestionIndex + 1));
-
+        progressBar.setProgress(currentQuestionIndex + 1);
         setAnswersToRadioButton();
+        startCountDown();
     }
 
     private void setAnswersToRadioButton() {
@@ -130,4 +202,49 @@ public class GeographyOrLiteratureQuizActivity extends AppCompatActivity {
         radioButton4.setText(questionKey.get(3));
     }
 
+    private void startCountDown() {
+        if (countDownTimer != null) {
+            countDownTimer.cancel();
+        }
+        countDownTimer = new CountDownTimer(COUNTDOWN_IN_MILLIS, 1000) {
+            @Override
+            public void onTick(long millisUntilFinished) {
+                int seconds = (int) (millisUntilFinished / 1000);
+                tvTimer.setText(String.format(Locale.getDefault(), "%02ds", seconds));
+                if (seconds < 5) {
+                    tvTimer.setTextColor(getResources().getColor(android.R.color.holo_red_light));
+                } else {
+                    tvTimer.setTextColor(getResources().getColor(R.color.peach));
+                }
+            }
+
+            @Override
+            public void onFinish() {
+                tvTimer.setText("00s");
+                Toast.makeText(GeographyOrLiteratureQuizActivity.this, "Hết giờ!", Toast.LENGTH_SHORT).show();
+                
+                Map<String, Boolean> answersMap = questionsAnswerMap.get(questions.get(currentQuestionIndex));
+                String correctAnswer = "";
+                for (Map.Entry<String, Boolean> entry : answersMap.entrySet()) {
+                    if (entry.getValue()) {
+                        correctAnswer = entry.getKey();
+                        break;
+                    }
+                }
+                questionResults.add(new QuestionResult(questions.get(currentQuestionIndex), correctAnswer, "Hết giờ", false));
+
+                Intent intent = getIntent();
+                String subject = intent.getStringExtra(Constants.SUBJECT);
+                goToNextQuestion(subject);
+            }
+        }.start();
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        if (countDownTimer != null) {
+            countDownTimer.cancel();
+        }
+    }
 }

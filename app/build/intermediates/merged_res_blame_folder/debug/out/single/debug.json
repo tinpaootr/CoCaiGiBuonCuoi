@@ -1,174 +1,178 @@
 [
     {
-        "merged": "C:\\Users\\ACER\\.gradle\\daemon\\8.5\\com.sagarkhurana.quizforfun.app-merged_res-60:\\drawable-anydpi-v24_ic_launcher_foreground.xml.flat",
-        "source": "C:\\Users\\ACER\\.gradle\\daemon\\8.5\\com.sagarkhurana.quizforfun.app-pngs-56:\\drawable-anydpi-v24\\ic_launcher_foreground.xml"
+        "merged": "C:\\Users\\ADMIN\\.gradle\\daemon\\8.5\\com.sagarkhurana.quizforfun.app-merged_res-60:\\drawable-v24_question1.gif.flat",
+        "source": "C:\\Users\\ADMIN\\.gradle\\daemon\\8.5\\com.sagarkhurana.quizforfun.app-main-62:\\drawable-v24\\question1.gif"
     },
     {
-        "merged": "C:\\Users\\ACER\\.gradle\\daemon\\8.5\\com.sagarkhurana.quizforfun.app-merged_res-60:\\mipmap-xxhdpi_ic_launcher_round.png.flat",
-        "source": "C:\\Users\\ACER\\.gradle\\daemon\\8.5\\com.sagarkhurana.quizforfun.app-main-62:\\mipmap-xxhdpi\\ic_launcher_round.png"
+        "merged": "C:\\Users\\ADMIN\\.gradle\\daemon\\8.5\\com.sagarkhurana.quizforfun.app-merged_res-60:\\layout_activity_final_result.xml.flat",
+        "source": "C:\\Users\\ADMIN\\.gradle\\daemon\\8.5\\com.sagarkhurana.quizforfun.app-main-62:\\layout\\activity_final_result.xml"
     },
     {
-        "merged": "C:\\Users\\ACER\\.gradle\\daemon\\8.5\\com.sagarkhurana.quizforfun.app-merged_res-60:\\drawable_icon.xml.flat",
-        "source": "C:\\Users\\ACER\\.gradle\\daemon\\8.5\\com.sagarkhurana.quizforfun.app-main-62:\\drawable\\icon.xml"
+        "merged": "com.sagarkhurana.quizforfun.app-merged_res-60:/layout_item_question_result.xml.flat",
+        "source": "com.sagarkhurana.quizforfun.app-main-62:/layout/item_question_result.xml"
     },
     {
-        "merged": "C:\\Users\\ACER\\.gradle\\daemon\\8.5\\com.sagarkhurana.quizforfun.app-merged_res-60:\\drawable_rules.xml.flat",
-        "source": "C:\\Users\\ACER\\.gradle\\daemon\\8.5\\com.sagarkhurana.quizforfun.app-main-62:\\drawable\\rules.xml"
+        "merged": "C:\\Users\\ADMIN\\.gradle\\daemon\\8.5\\com.sagarkhurana.quizforfun.app-merged_res-60:\\mipmap-xxxhdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\ADMIN\\.gradle\\daemon\\8.5\\com.sagarkhurana.quizforfun.app-main-62:\\mipmap-xxxhdpi\\ic_launcher.png"
     },
     {
-        "merged": "C:\\Users\\ACER\\.gradle\\daemon\\8.5\\com.sagarkhurana.quizforfun.app-merged_res-60:\\layout_activity_rule.xml.flat",
-        "source": "C:\\Users\\ACER\\.gradle\\daemon\\8.5\\com.sagarkhurana.quizforfun.app-main-62:\\layout\\activity_rule.xml"
+        "merged": "C:\\Users\\ADMIN\\.gradle\\daemon\\8.5\\com.sagarkhurana.quizforfun.app-merged_res-60:\\mipmap-xxhdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\ADMIN\\.gradle\\daemon\\8.5\\com.sagarkhurana.quizforfun.app-main-62:\\mipmap-xxhdpi\\ic_launcher_round.png"
     },
     {
-        "merged": "C:\\Users\\ACER\\.gradle\\daemon\\8.5\\com.sagarkhurana.quizforfun.app-merged_res-60:\\layout_item_history.xml.flat",
-        "source": "C:\\Users\\ACER\\.gradle\\daemon\\8.5\\com.sagarkhurana.quizforfun.app-main-62:\\layout\\item_history.xml"
+        "merged": "C:\\Users\\ADMIN\\.gradle\\daemon\\8.5\\com.sagarkhurana.quizforfun.app-merged_res-60:\\layout_activity_history.xml.flat",
+        "source": "C:\\Users\\ADMIN\\.gradle\\daemon\\8.5\\com.sagarkhurana.quizforfun.app-main-62:\\layout\\activity_history.xml"
     },
     {
-        "merged": "C:\\Users\\ACER\\.gradle\\daemon\\8.5\\com.sagarkhurana.quizforfun.app-merged_res-60:\\layout_activity_math_quiz.xml.flat",
-        "source": "C:\\Users\\ACER\\.gradle\\daemon\\8.5\\com.sagarkhurana.quizforfun.app-main-62:\\layout\\activity_math_quiz.xml"
+        "merged": "C:\\Users\\ADMIN\\.gradle\\daemon\\8.5\\com.sagarkhurana.quizforfun.app-merged_res-60:\\mipmap-hdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\ADMIN\\.gradle\\daemon\\8.5\\com.sagarkhurana.quizforfun.app-main-62:\\mipmap-hdpi\\ic_launcher_round.png"
     },
     {
-        "merged": "C:\\Users\\ACER\\.gradle\\daemon\\8.5\\com.sagarkhurana.quizforfun.app-merged_res-60:\\layout_activity_edit_password.xml.flat",
-        "source": "C:\\Users\\ACER\\.gradle\\daemon\\8.5\\com.sagarkhurana.quizforfun.app-main-62:\\layout\\activity_edit_password.xml"
+        "merged": "C:\\Users\\ADMIN\\.gradle\\daemon\\8.5\\com.sagarkhurana.quizforfun.app-merged_res-60:\\drawable_rules.xml.flat",
+        "source": "C:\\Users\\ADMIN\\.gradle\\daemon\\8.5\\com.sagarkhurana.quizforfun.app-main-62:\\drawable\\rules.xml"
     },
     {
-        "merged": "C:\\Users\\ACER\\.gradle\\daemon\\8.5\\com.sagarkhurana.quizforfun.app-merged_res-60:\\drawable_book.xml.flat",
-        "source": "C:\\Users\\ACER\\.gradle\\daemon\\8.5\\com.sagarkhurana.quizforfun.app-main-62:\\drawable\\book.xml"
+        "merged": "C:\\Users\\ADMIN\\.gradle\\daemon\\8.5\\com.sagarkhurana.quizforfun.app-merged_res-60:\\drawable_blackboard.xml.flat",
+        "source": "C:\\Users\\ADMIN\\.gradle\\daemon\\8.5\\com.sagarkhurana.quizforfun.app-main-62:\\drawable\\blackboard.xml"
     },
     {
-        "merged": "C:\\Users\\ACER\\.gradle\\daemon\\8.5\\com.sagarkhurana.quizforfun.app-merged_res-60:\\drawable_logout.xml.flat",
-        "source": "C:\\Users\\ACER\\.gradle\\daemon\\8.5\\com.sagarkhurana.quizforfun.app-main-62:\\drawable\\logout.xml"
+        "merged": "C:\\Users\\ADMIN\\.gradle\\daemon\\8.5\\com.sagarkhurana.quizforfun.app-merged_res-60:\\drawable_history.xml.flat",
+        "source": "C:\\Users\\ADMIN\\.gradle\\daemon\\8.5\\com.sagarkhurana.quizforfun.app-main-62:\\drawable\\history.xml"
     },
     {
-        "merged": "C:\\Users\\ACER\\.gradle\\daemon\\8.5\\com.sagarkhurana.quizforfun.app-merged_res-60:\\drawable_history.xml.flat",
-        "source": "C:\\Users\\ACER\\.gradle\\daemon\\8.5\\com.sagarkhurana.quizforfun.app-main-62:\\drawable\\history.xml"
+        "merged": "C:\\Users\\ADMIN\\.gradle\\daemon\\8.5\\com.sagarkhurana.quizforfun.app-merged_res-60:\\layout_activity_register.xml.flat",
+        "source": "C:\\Users\\ADMIN\\.gradle\\daemon\\8.5\\com.sagarkhurana.quizforfun.app-main-62:\\layout\\activity_register.xml"
     },
     {
-        "merged": "C:\\Users\\ACER\\.gradle\\daemon\\8.5\\com.sagarkhurana.quizforfun.app-merged_res-60:\\drawable-v24_question1.gif.flat",
-        "source": "C:\\Users\\ACER\\.gradle\\daemon\\8.5\\com.sagarkhurana.quizforfun.app-main-62:\\drawable-v24\\question1.gif"
+        "merged": "C:\\Users\\ADMIN\\.gradle\\daemon\\8.5\\com.sagarkhurana.quizforfun.app-merged_res-60:\\drawable_arrow.xml.flat",
+        "source": "C:\\Users\\ADMIN\\.gradle\\daemon\\8.5\\com.sagarkhurana.quizforfun.app-main-62:\\drawable\\arrow.xml"
     },
     {
-        "merged": "C:\\Users\\ACER\\.gradle\\daemon\\8.5\\com.sagarkhurana.quizforfun.app-merged_res-60:\\layout_activity_geography_or_literature_quiz.xml.flat",
-        "source": "C:\\Users\\ACER\\.gradle\\daemon\\8.5\\com.sagarkhurana.quizforfun.app-main-62:\\layout\\activity_geography_or_literature_quiz.xml"
+        "merged": "C:\\Users\\ADMIN\\.gradle\\daemon\\8.5\\com.sagarkhurana.quizforfun.app-merged_res-60:\\layout_activity_quiz_option.xml.flat",
+        "source": "C:\\Users\\ADMIN\\.gradle\\daemon\\8.5\\com.sagarkhurana.quizforfun.app-main-62:\\layout\\activity_quiz_option.xml"
     },
     {
-        "merged": "C:\\Users\\ACER\\.gradle\\daemon\\8.5\\com.sagarkhurana.quizforfun.app-merged_res-60:\\drawable_worldwide.xml.flat",
-        "source": "C:\\Users\\ACER\\.gradle\\daemon\\8.5\\com.sagarkhurana.quizforfun.app-main-62:\\drawable\\worldwide.xml"
+        "merged": "C:\\Users\\ADMIN\\.gradle\\daemon\\8.5\\com.sagarkhurana.quizforfun.app-merged_res-60:\\layout_activity_edit_password.xml.flat",
+        "source": "C:\\Users\\ADMIN\\.gradle\\daemon\\8.5\\com.sagarkhurana.quizforfun.app-main-62:\\layout\\activity_edit_password.xml"
     },
     {
-        "merged": "C:\\Users\\ACER\\.gradle\\daemon\\8.5\\com.sagarkhurana.quizforfun.app-merged_res-60:\\mipmap-xhdpi_ic_launcher.png.flat",
-        "source": "C:\\Users\\ACER\\.gradle\\daemon\\8.5\\com.sagarkhurana.quizforfun.app-main-62:\\mipmap-xhdpi\\ic_launcher.png"
+        "merged": "C:\\Users\\ADMIN\\.gradle\\daemon\\8.5\\com.sagarkhurana.quizforfun.app-merged_res-60:\\drawable-anydpi-v24_ic_launcher_foreground.xml.flat",
+        "source": "C:\\Users\\ADMIN\\.gradle\\daemon\\8.5\\com.sagarkhurana.quizforfun.app-pngs-56:\\drawable-anydpi-v24\\ic_launcher_foreground.xml"
     },
     {
-        "merged": "C:\\Users\\ACER\\.gradle\\daemon\\8.5\\com.sagarkhurana.quizforfun.app-merged_res-60:\\mipmap-xxxhdpi_ic_launcher_round.png.flat",
-        "source": "C:\\Users\\ACER\\.gradle\\daemon\\8.5\\com.sagarkhurana.quizforfun.app-main-62:\\mipmap-xxxhdpi\\ic_launcher_round.png"
+        "merged": "C:\\Users\\ADMIN\\.gradle\\daemon\\8.5\\com.sagarkhurana.quizforfun.app-merged_res-60:\\drawable_keys.xml.flat",
+        "source": "C:\\Users\\ADMIN\\.gradle\\daemon\\8.5\\com.sagarkhurana.quizforfun.app-main-62:\\drawable\\keys.xml"
     },
     {
-        "merged": "C:\\Users\\ACER\\.gradle\\daemon\\8.5\\com.sagarkhurana.quizforfun.app-merged_res-60:\\mipmap-xxhdpi_ic_launcher.png.flat",
-        "source": "C:\\Users\\ACER\\.gradle\\daemon\\8.5\\com.sagarkhurana.quizforfun.app-main-62:\\mipmap-xxhdpi\\ic_launcher.png"
+        "merged": "C:\\Users\\ADMIN\\.gradle\\daemon\\8.5\\com.sagarkhurana.quizforfun.app-merged_res-60:\\layout_activity_math_quiz.xml.flat",
+        "source": "C:\\Users\\ADMIN\\.gradle\\daemon\\8.5\\com.sagarkhurana.quizforfun.app-main-62:\\layout\\activity_math_quiz.xml"
     },
     {
-        "merged": "C:\\Users\\ACER\\.gradle\\daemon\\8.5\\com.sagarkhurana.quizforfun.app-merged_res-60:\\layout_activity_final_result.xml.flat",
-        "source": "C:\\Users\\ACER\\.gradle\\daemon\\8.5\\com.sagarkhurana.quizforfun.app-main-62:\\layout\\activity_final_result.xml"
+        "merged": "C:\\Users\\ADMIN\\.gradle\\daemon\\8.5\\com.sagarkhurana.quizforfun.app-merged_res-60:\\mipmap-mdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\ADMIN\\.gradle\\daemon\\8.5\\com.sagarkhurana.quizforfun.app-main-62:\\mipmap-mdpi\\ic_launcher.png"
     },
     {
-        "merged": "C:\\Users\\ACER\\.gradle\\daemon\\8.5\\com.sagarkhurana.quizforfun.app-merged_res-60:\\mipmap-xxxhdpi_ic_launcher.png.flat",
-        "source": "C:\\Users\\ACER\\.gradle\\daemon\\8.5\\com.sagarkhurana.quizforfun.app-main-62:\\mipmap-xxxhdpi\\ic_launcher.png"
+        "merged": "C:\\Users\\ADMIN\\.gradle\\daemon\\8.5\\com.sagarkhurana.quizforfun.app-merged_res-60:\\drawable_selected.xml.flat",
+        "source": "C:\\Users\\ADMIN\\.gradle\\daemon\\8.5\\com.sagarkhurana.quizforfun.app-main-62:\\drawable\\selected.xml"
     },
     {
-        "merged": "C:\\Users\\ACER\\.gradle\\daemon\\8.5\\com.sagarkhurana.quizforfun.app-merged_res-60:\\layout_activity_quiz_option.xml.flat",
-        "source": "C:\\Users\\ACER\\.gradle\\daemon\\8.5\\com.sagarkhurana.quizforfun.app-main-62:\\layout\\activity_quiz_option.xml"
+        "merged": "C:\\Users\\ADMIN\\.gradle\\daemon\\8.5\\com.sagarkhurana.quizforfun.app-merged_res-60:\\drawable_noted.gif.flat",
+        "source": "C:\\Users\\ADMIN\\.gradle\\daemon\\8.5\\com.sagarkhurana.quizforfun.app-main-62:\\drawable\\noted.gif"
     },
     {
-        "merged": "C:\\Users\\ACER\\.gradle\\daemon\\8.5\\com.sagarkhurana.quizforfun.app-merged_res-60:\\mipmap-mdpi_ic_launcher.png.flat",
-        "source": "C:\\Users\\ACER\\.gradle\\daemon\\8.5\\com.sagarkhurana.quizforfun.app-main-62:\\mipmap-mdpi\\ic_launcher.png"
+        "merged": "C:\\Users\\ADMIN\\.gradle\\daemon\\8.5\\com.sagarkhurana.quizforfun.app-merged_res-60:\\layout_activity_main.xml.flat",
+        "source": "C:\\Users\\ADMIN\\.gradle\\daemon\\8.5\\com.sagarkhurana.quizforfun.app-main-62:\\layout\\activity_main.xml"
     },
     {
-        "merged": "C:\\Users\\ACER\\.gradle\\daemon\\8.5\\com.sagarkhurana.quizforfun.app-merged_res-60:\\layout_activity_login.xml.flat",
-        "source": "C:\\Users\\ACER\\.gradle\\daemon\\8.5\\com.sagarkhurana.quizforfun.app-main-62:\\layout\\activity_login.xml"
+        "merged": "C:\\Users\\ADMIN\\.gradle\\daemon\\8.5\\com.sagarkhurana.quizforfun.app-merged_res-60:\\mipmap-xhdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\ADMIN\\.gradle\\daemon\\8.5\\com.sagarkhurana.quizforfun.app-main-62:\\mipmap-xhdpi\\ic_launcher.png"
     },
     {
-        "merged": "C:\\Users\\ACER\\.gradle\\daemon\\8.5\\com.sagarkhurana.quizforfun.app-merged_res-60:\\drawable_keys.xml.flat",
-        "source": "C:\\Users\\ACER\\.gradle\\daemon\\8.5\\com.sagarkhurana.quizforfun.app-main-62:\\drawable\\keys.xml"
+        "merged": "C:\\Users\\ADMIN\\.gradle\\daemon\\8.5\\com.sagarkhurana.quizforfun.app-merged_res-60:\\mipmap-xhdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\ADMIN\\.gradle\\daemon\\8.5\\com.sagarkhurana.quizforfun.app-main-62:\\mipmap-xhdpi\\ic_launcher_round.png"
     },
     {
-        "merged": "C:\\Users\\ACER\\.gradle\\daemon\\8.5\\com.sagarkhurana.quizforfun.app-merged_res-60:\\layout_activity_history.xml.flat",
-        "source": "C:\\Users\\ACER\\.gradle\\daemon\\8.5\\com.sagarkhurana.quizforfun.app-main-62:\\layout\\activity_history.xml"
+        "merged": "C:\\Users\\ADMIN\\.gradle\\daemon\\8.5\\com.sagarkhurana.quizforfun.app-merged_res-60:\\layout_item_history.xml.flat",
+        "source": "C:\\Users\\ADMIN\\.gradle\\daemon\\8.5\\com.sagarkhurana.quizforfun.app-main-62:\\layout\\item_history.xml"
     },
     {
-        "merged": "C:\\Users\\ACER\\.gradle\\daemon\\8.5\\com.sagarkhurana.quizforfun.app-merged_res-60:\\layout_activity_main.xml.flat",
-        "source": "C:\\Users\\ACER\\.gradle\\daemon\\8.5\\com.sagarkhurana.quizforfun.app-main-62:\\layout\\activity_main.xml"
+        "merged": "C:\\Users\\ADMIN\\.gradle\\daemon\\8.5\\com.sagarkhurana.quizforfun.app-merged_res-60:\\mipmap-mdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\ADMIN\\.gradle\\daemon\\8.5\\com.sagarkhurana.quizforfun.app-main-62:\\mipmap-mdpi\\ic_launcher_round.png"
     },
     {
-        "merged": "C:\\Users\\ACER\\.gradle\\daemon\\8.5\\com.sagarkhurana.quizforfun.app-merged_res-60:\\layout_activity_register.xml.flat",
-        "source": "C:\\Users\\ACER\\.gradle\\daemon\\8.5\\com.sagarkhurana.quizforfun.app-main-62:\\layout\\activity_register.xml"
+        "merged": "C:\\Users\\ADMIN\\.gradle\\daemon\\8.5\\com.sagarkhurana.quizforfun.app-merged_res-60:\\drawable_correct.gif.flat",
+        "source": "C:\\Users\\ADMIN\\.gradle\\daemon\\8.5\\com.sagarkhurana.quizforfun.app-main-62:\\drawable\\correct.gif"
     },
     {
-        "merged": "C:\\Users\\ACER\\.gradle\\daemon\\8.5\\com.sagarkhurana.quizforfun.app-merged_res-60:\\drawable_splash_image.xml.flat",
-        "source": "C:\\Users\\ACER\\.gradle\\daemon\\8.5\\com.sagarkhurana.quizforfun.app-main-62:\\drawable\\splash_image.xml"
+        "merged": "C:\\Users\\ADMIN\\.gradle\\daemon\\8.5\\com.sagarkhurana.quizforfun.app-merged_res-60:\\drawable_logout.xml.flat",
+        "source": "C:\\Users\\ADMIN\\.gradle\\daemon\\8.5\\com.sagarkhurana.quizforfun.app-main-62:\\drawable\\logout.xml"
     },
     {
-        "merged": "C:\\Users\\ACER\\.gradle\\daemon\\8.5\\com.sagarkhurana.quizforfun.app-merged_res-60:\\drawable_selected.xml.flat",
-        "source": "C:\\Users\\ACER\\.gradle\\daemon\\8.5\\com.sagarkhurana.quizforfun.app-main-62:\\drawable\\selected.xml"
+        "merged": "C:\\Users\\ADMIN\\.gradle\\daemon\\8.5\\com.sagarkhurana.quizforfun.app-merged_res-60:\\mipmap-xxhdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\ADMIN\\.gradle\\daemon\\8.5\\com.sagarkhurana.quizforfun.app-main-62:\\mipmap-xxhdpi\\ic_launcher.png"
     },
     {
-        "merged": "C:\\Users\\ACER\\.gradle\\daemon\\8.5\\com.sagarkhurana.quizforfun.app-merged_res-60:\\drawable_quiz.xml.flat",
-        "source": "C:\\Users\\ACER\\.gradle\\daemon\\8.5\\com.sagarkhurana.quizforfun.app-main-62:\\drawable\\quiz.xml"
+        "merged": "C:\\Users\\ADMIN\\.gradle\\daemon\\8.5\\com.sagarkhurana.quizforfun.app-merged_res-60:\\drawable_ic_launcher_background.xml.flat",
+        "source": "C:\\Users\\ADMIN\\.gradle\\daemon\\8.5\\com.sagarkhurana.quizforfun.app-main-62:\\drawable\\ic_launcher_background.xml"
     },
     {
-        "merged": "C:\\Users\\ACER\\.gradle\\daemon\\8.5\\com.sagarkhurana.quizforfun.app-merged_res-60:\\drawable_ic_launcher_background.xml.flat",
-        "source": "C:\\Users\\ACER\\.gradle\\daemon\\8.5\\com.sagarkhurana.quizforfun.app-main-62:\\drawable\\ic_launcher_background.xml"
+        "merged": "C:\\Users\\ADMIN\\.gradle\\daemon\\8.5\\com.sagarkhurana.quizforfun.app-merged_res-60:\\drawable_book.xml.flat",
+        "source": "C:\\Users\\ADMIN\\.gradle\\daemon\\8.5\\com.sagarkhurana.quizforfun.app-main-62:\\drawable\\book.xml"
     },
     {
-        "merged": "C:\\Users\\ACER\\.gradle\\daemon\\8.5\\com.sagarkhurana.quizforfun.app-merged_res-60:\\mipmap-hdpi_ic_launcher.png.flat",
-        "source": "C:\\Users\\ACER\\.gradle\\daemon\\8.5\\com.sagarkhurana.quizforfun.app-main-62:\\mipmap-hdpi\\ic_launcher.png"
+        "merged": "com.sagarkhurana.quizforfun.app-merged_res-60:/layout_activity_quiz_detail.xml.flat",
+        "source": "com.sagarkhurana.quizforfun.app-main-62:/layout/activity_quiz_detail.xml"
     },
     {
-        "merged": "C:\\Users\\ACER\\.gradle\\daemon\\8.5\\com.sagarkhurana.quizforfun.app-merged_res-60:\\drawable_home_bg.xml.flat",
-        "source": "C:\\Users\\ACER\\.gradle\\daemon\\8.5\\com.sagarkhurana.quizforfun.app-main-62:\\drawable\\home_bg.xml"
+        "merged": "C:\\Users\\ADMIN\\.gradle\\daemon\\8.5\\com.sagarkhurana.quizforfun.app-merged_res-60:\\drawable_splash_image.xml.flat",
+        "source": "C:\\Users\\ADMIN\\.gradle\\daemon\\8.5\\com.sagarkhurana.quizforfun.app-main-62:\\drawable\\splash_image.xml"
     },
     {
-        "merged": "C:\\Users\\ACER\\.gradle\\daemon\\8.5\\com.sagarkhurana.quizforfun.app-merged_res-60:\\drawable_arrow.xml.flat",
-        "source": "C:\\Users\\ACER\\.gradle\\daemon\\8.5\\com.sagarkhurana.quizforfun.app-main-62:\\drawable\\arrow.xml"
+        "merged": "C:\\Users\\ADMIN\\.gradle\\daemon\\8.5\\com.sagarkhurana.quizforfun.app-merged_res-60:\\layout_slide_rules.xml.flat",
+        "source": "C:\\Users\\ADMIN\\.gradle\\daemon\\8.5\\com.sagarkhurana.quizforfun.app-main-62:\\layout\\slide_rules.xml"
     },
     {
-        "merged": "C:\\Users\\ACER\\.gradle\\daemon\\8.5\\com.sagarkhurana.quizforfun.app-merged_res-60:\\drawable_incorrect.gif.flat",
-        "source": "C:\\Users\\ACER\\.gradle\\daemon\\8.5\\com.sagarkhurana.quizforfun.app-main-62:\\drawable\\incorrect.gif"
+        "merged": "C:\\Users\\ADMIN\\.gradle\\daemon\\8.5\\com.sagarkhurana.quizforfun.app-merged_res-60:\\drawable_icon.xml.flat",
+        "source": "C:\\Users\\ADMIN\\.gradle\\daemon\\8.5\\com.sagarkhurana.quizforfun.app-main-62:\\drawable\\icon.xml"
     },
     {
-        "merged": "C:\\Users\\ACER\\.gradle\\daemon\\8.5\\com.sagarkhurana.quizforfun.app-merged_res-60:\\drawable_unselected.xml.flat",
-        "source": "C:\\Users\\ACER\\.gradle\\daemon\\8.5\\com.sagarkhurana.quizforfun.app-main-62:\\drawable\\unselected.xml"
+        "merged": "C:\\Users\\ADMIN\\.gradle\\daemon\\8.5\\com.sagarkhurana.quizforfun.app-merged_res-60:\\drawable_worldwide.xml.flat",
+        "source": "C:\\Users\\ADMIN\\.gradle\\daemon\\8.5\\com.sagarkhurana.quizforfun.app-main-62:\\drawable\\worldwide.xml"
     },
     {
-        "merged": "C:\\Users\\ACER\\.gradle\\daemon\\8.5\\com.sagarkhurana.quizforfun.app-merged_res-60:\\drawable_noted.gif.flat",
-        "source": "C:\\Users\\ACER\\.gradle\\daemon\\8.5\\com.sagarkhurana.quizforfun.app-main-62:\\drawable\\noted.gif"
+        "merged": "C:\\Users\\ADMIN\\.gradle\\daemon\\8.5\\com.sagarkhurana.quizforfun.app-merged_res-60:\\layout_activity_geography_or_literature_quiz.xml.flat",
+        "source": "C:\\Users\\ADMIN\\.gradle\\daemon\\8.5\\com.sagarkhurana.quizforfun.app-main-62:\\layout\\activity_geography_or_literature_quiz.xml"
     },
     {
-        "merged": "C:\\Users\\ACER\\.gradle\\daemon\\8.5\\com.sagarkhurana.quizforfun.app-merged_res-60:\\mipmap-hdpi_ic_launcher_round.png.flat",
-        "source": "C:\\Users\\ACER\\.gradle\\daemon\\8.5\\com.sagarkhurana.quizforfun.app-main-62:\\mipmap-hdpi\\ic_launcher_round.png"
+        "merged": "C:\\Users\\ADMIN\\.gradle\\daemon\\8.5\\com.sagarkhurana.quizforfun.app-merged_res-60:\\layout_activity_login.xml.flat",
+        "source": "C:\\Users\\ADMIN\\.gradle\\daemon\\8.5\\com.sagarkhurana.quizforfun.app-main-62:\\layout\\activity_login.xml"
     },
     {
-        "merged": "C:\\Users\\ACER\\.gradle\\daemon\\8.5\\com.sagarkhurana.quizforfun.app-merged_res-60:\\mipmap-xhdpi_ic_launcher_round.png.flat",
-        "source": "C:\\Users\\ACER\\.gradle\\daemon\\8.5\\com.sagarkhurana.quizforfun.app-main-62:\\mipmap-xhdpi\\ic_launcher_round.png"
+        "merged": "C:\\Users\\ADMIN\\.gradle\\daemon\\8.5\\com.sagarkhurana.quizforfun.app-merged_res-60:\\drawable_home_bg.xml.flat",
+        "source": "C:\\Users\\ADMIN\\.gradle\\daemon\\8.5\\com.sagarkhurana.quizforfun.app-main-62:\\drawable\\home_bg.xml"
     },
     {
-        "merged": "com.sagarkhurana.quizforfun.app-merged_res-60:/layout_activity_final_result.xml.flat",
-        "source": "com.sagarkhurana.quizforfun.app-main-62:/layout/activity_final_result.xml"
+        "merged": "C:\\Users\\ADMIN\\.gradle\\daemon\\8.5\\com.sagarkhurana.quizforfun.app-merged_res-60:\\mipmap-hdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\ADMIN\\.gradle\\daemon\\8.5\\com.sagarkhurana.quizforfun.app-main-62:\\mipmap-hdpi\\ic_launcher.png"
     },
     {
-        "merged": "C:\\Users\\ACER\\.gradle\\daemon\\8.5\\com.sagarkhurana.quizforfun.app-merged_res-60:\\mipmap-mdpi_ic_launcher_round.png.flat",
-        "source": "C:\\Users\\ACER\\.gradle\\daemon\\8.5\\com.sagarkhurana.quizforfun.app-main-62:\\mipmap-mdpi\\ic_launcher_round.png"
+        "merged": "C:\\Users\\ADMIN\\.gradle\\daemon\\8.5\\com.sagarkhurana.quizforfun.app-merged_res-60:\\mipmap-xxxhdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\ADMIN\\.gradle\\daemon\\8.5\\com.sagarkhurana.quizforfun.app-main-62:\\mipmap-xxxhdpi\\ic_launcher_round.png"
     },
     {
-        "merged": "C:\\Users\\ACER\\.gradle\\daemon\\8.5\\com.sagarkhurana.quizforfun.app-merged_res-60:\\drawable_correct.gif.flat",
-        "source": "C:\\Users\\ACER\\.gradle\\daemon\\8.5\\com.sagarkhurana.quizforfun.app-main-62:\\drawable\\correct.gif"
+        "merged": "C:\\Users\\ADMIN\\.gradle\\daemon\\8.5\\com.sagarkhurana.quizforfun.app-merged_res-60:\\drawable_incorrect.gif.flat",
+        "source": "C:\\Users\\ADMIN\\.gradle\\daemon\\8.5\\com.sagarkhurana.quizforfun.app-main-62:\\drawable\\incorrect.gif"
     },
     {
-        "merged": "C:\\Users\\ACER\\.gradle\\daemon\\8.5\\com.sagarkhurana.quizforfun.app-merged_res-60:\\drawable_blackboard.xml.flat",
-        "source": "C:\\Users\\ACER\\.gradle\\daemon\\8.5\\com.sagarkhurana.quizforfun.app-main-62:\\drawable\\blackboard.xml"
+        "merged": "C:\\Users\\ADMIN\\.gradle\\daemon\\8.5\\com.sagarkhurana.quizforfun.app-merged_res-60:\\drawable_unselected.xml.flat",
+        "source": "C:\\Users\\ADMIN\\.gradle\\daemon\\8.5\\com.sagarkhurana.quizforfun.app-main-62:\\drawable\\unselected.xml"
     },
     {
-        "merged": "C:\\Users\\ACER\\.gradle\\daemon\\8.5\\com.sagarkhurana.quizforfun.app-merged_res-60:\\layout_slide_rules.xml.flat",
-        "source": "C:\\Users\\ACER\\.gradle\\daemon\\8.5\\com.sagarkhurana.quizforfun.app-main-62:\\layout\\slide_rules.xml"
+        "merged": "C:\\Users\\ADMIN\\.gradle\\daemon\\8.5\\com.sagarkhurana.quizforfun.app-merged_res-60:\\layout_activity_rule.xml.flat",
+        "source": "C:\\Users\\ADMIN\\.gradle\\daemon\\8.5\\com.sagarkhurana.quizforfun.app-main-62:\\layout\\activity_rule.xml"
+    },
+    {
+        "merged": "C:\\Users\\ADMIN\\.gradle\\daemon\\8.5\\com.sagarkhurana.quizforfun.app-merged_res-60:\\drawable_quiz.xml.flat",
+        "source": "C:\\Users\\ADMIN\\.gradle\\daemon\\8.5\\com.sagarkhurana.quizforfun.app-main-62:\\drawable\\quiz.xml"
     }
 ]

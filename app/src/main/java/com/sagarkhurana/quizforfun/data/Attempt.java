@@ -3,7 +3,6 @@ package com.sagarkhurana.quizforfun.data;
 import android.os.Parcel;
 import android.os.Parcelable;
 
-import androidx.annotation.NonNull;
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
@@ -26,6 +25,9 @@ public class Attempt implements Parcelable {
     private final String email;
     @ColumnInfo(name = "overallPoints")
     private int overallPoints;
+    
+    @ColumnInfo(name = "questionsJson")
+    private String questionsJson; // Lưu danh sách câu hỏi và câu trả lời dưới dạng JSON
 
     public Attempt(long createdTime, String subject, int correct, int incorrect, int earned, String email) {
         this.createdTime = createdTime;
@@ -68,8 +70,12 @@ public class Attempt implements Parcelable {
         return overallPoints;
     }
 
-    public static Creator<Attempt> getCREATOR() {
-        return CREATOR;
+    public String getQuestionsJson() {
+        return questionsJson;
+    }
+
+    public void setQuestionsJson(String questionsJson) {
+        this.questionsJson = questionsJson;
     }
 
     protected Attempt(Parcel in) {
@@ -80,6 +86,7 @@ public class Attempt implements Parcelable {
         earned = in.readInt();
         email = in.readString();
         overallPoints = in.readInt();
+        questionsJson = in.readString();
     }
 
     @Override
@@ -91,6 +98,7 @@ public class Attempt implements Parcelable {
         dest.writeInt(earned);
         dest.writeString(email);
         dest.writeInt(overallPoints);
+        dest.writeString(questionsJson);
     }
 
     @Override

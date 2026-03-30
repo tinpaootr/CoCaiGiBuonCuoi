@@ -1,5 +1,6 @@
 package com.sagarkhurana.quizforfun.adapter;
 
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -9,8 +10,10 @@ import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.sagarkhurana.quizforfun.QuizDetailActivity;
 import com.sagarkhurana.quizforfun.R;
 import com.sagarkhurana.quizforfun.data.Attempt;
+import com.sagarkhurana.quizforfun.other.Constants;
 
 import java.util.List;
 
@@ -44,7 +47,11 @@ public class HistoryAdapter extends RecyclerView.Adapter<HistoryAdapter.AttemptV
         holder.cvParent.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                // DO NOTHING
+                if (item.getQuestionsJson() != null && !item.getQuestionsJson().isEmpty()) {
+                    Intent intent = new Intent(view.getContext(), QuizDetailActivity.class);
+                    intent.putExtra(Constants.QUESTIONS_DETAILS, item.getQuestionsJson());
+                    view.getContext().startActivity(intent);
+                }
             }
         });
 

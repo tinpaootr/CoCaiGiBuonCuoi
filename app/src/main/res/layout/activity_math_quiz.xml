@@ -30,19 +30,45 @@
         app:layout_constraintStart_toEndOf="@+id/imageViewStartQuiz"
         app:layout_constraintTop_toTopOf="@+id/imageViewStartQuiz" />
 
+    <com.google.android.material.progressindicator.LinearProgressIndicator
+        android:id="@+id/progressBarMath"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:trackThickness="8dp"
+        app:trackCornerRadius="4dp"
+        app:indicatorColor="@color/peach" />
+
+    <TextView
+        android:id="@+id/tvTimerMath"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="20s"
+        android:textColor="@color/peach"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/progressBarMath"
+        app:layout_constraintTop_toBottomOf="@+id/progressBarMath" />
+
     <TextView
         android:id="@+id/textView8"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="40dp"
         android:layout_marginEnd="24dp"
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="32sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/tvTimerMath"
         tools:text="2 + 2 = ?" />
 
 
@@ -64,7 +90,7 @@
             android:gravity="center"
             android:hint="@string/enter_answer"
             android:imeOptions="actionDone"
-            android:inputType="textEmailAddress"
+            android:inputType="number"
             android:singleLine="true" />
     </com.google.android.material.textfield.TextInputLayout>
 

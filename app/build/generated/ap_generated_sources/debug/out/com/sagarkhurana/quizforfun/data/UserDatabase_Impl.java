@@ -33,9 +33,9 @@ public final class UserDatabase_Impl extends UserDatabase {
       @Override
       public void createAllTables(@NonNull final SupportSQLiteDatabase db) {
         db.execSQL("CREATE TABLE IF NOT EXISTS `user` (`username` TEXT, `email` TEXT NOT NULL, `password` TEXT, PRIMARY KEY(`email`))");
-        db.execSQL("CREATE TABLE IF NOT EXISTS `attempt` (`createdTimeAttempt` INTEGER NOT NULL, `subject` TEXT, `correct` INTEGER NOT NULL, `incorrect` INTEGER NOT NULL, `earned` INTEGER NOT NULL, `email` TEXT, `overallPoints` INTEGER NOT NULL, PRIMARY KEY(`createdTimeAttempt`))");
+        db.execSQL("CREATE TABLE IF NOT EXISTS `attempt` (`createdTimeAttempt` INTEGER NOT NULL, `subject` TEXT, `correct` INTEGER NOT NULL, `incorrect` INTEGER NOT NULL, `earned` INTEGER NOT NULL, `email` TEXT, `overallPoints` INTEGER NOT NULL, `questionsJson` TEXT, PRIMARY KEY(`createdTimeAttempt`))");
         db.execSQL("CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)");
-        db.execSQL("INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '65f0e4d393938989bac309c3ff5fb73f')");
+        db.execSQL("INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, 'c37d7d9d07f85338332d051f5c7eab10')");
       }
 
       @Override
@@ -98,7 +98,7 @@ public final class UserDatabase_Impl extends UserDatabase {
                   + " Expected:\n" + _infoUser + "\n"
                   + " Found:\n" + _existingUser);
         }
-        final HashMap<String, TableInfo.Column> _columnsAttempt = new HashMap<String, TableInfo.Column>(7);
+        final HashMap<String, TableInfo.Column> _columnsAttempt = new HashMap<String, TableInfo.Column>(8);
         _columnsAttempt.put("createdTimeAttempt", new TableInfo.Column("createdTimeAttempt", "INTEGER", true, 1, null, TableInfo.CREATED_FROM_ENTITY));
         _columnsAttempt.put("subject", new TableInfo.Column("subject", "TEXT", false, 0, null, TableInfo.CREATED_FROM_ENTITY));
         _columnsAttempt.put("correct", new TableInfo.Column("correct", "INTEGER", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
@@ -106,6 +106,7 @@ public final class UserDatabase_Impl extends UserDatabase {
         _columnsAttempt.put("earned", new TableInfo.Column("earned", "INTEGER", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
         _columnsAttempt.put("email", new TableInfo.Column("email", "TEXT", false, 0, null, TableInfo.CREATED_FROM_ENTITY));
         _columnsAttempt.put("overallPoints", new TableInfo.Column("overallPoints", "INTEGER", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
+        _columnsAttempt.put("questionsJson", new TableInfo.Column("questionsJson", "TEXT", false, 0, null, TableInfo.CREATED_FROM_ENTITY));
         final HashSet<TableInfo.ForeignKey> _foreignKeysAttempt = new HashSet<TableInfo.ForeignKey>(0);
         final HashSet<TableInfo.Index> _indicesAttempt = new HashSet<TableInfo.Index>(0);
         final TableInfo _infoAttempt = new TableInfo("attempt", _columnsAttempt, _foreignKeysAttempt, _indicesAttempt);
@@ -117,7 +118,7 @@ public final class UserDatabase_Impl extends UserDatabase {
         }
         return new RoomOpenHelper.ValidationResult(true, null);
       }
-    }, "65f0e4d393938989bac309c3ff5fb73f", "4361ad9e0ed0d6f241623632028cdb5f");
+    }, "c37d7d9d07f85338332d051f5c7eab10", "4fed6a0db0e0bce8d27572c2fa94b9bd");
     final SupportSQLiteOpenHelper.Configuration _sqliteConfig = SupportSQLiteOpenHelper.Configuration.builder(config.context).name(config.name).callback(_openCallback).build();
     final SupportSQLiteOpenHelper _helper = config.sqliteOpenHelperFactory.create(_sqliteConfig);
     return _helper;

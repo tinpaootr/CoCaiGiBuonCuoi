@@ -1,10 +1,5 @@
 package com.sagarkhurana.quizforfun.other;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Random;
-
 public class Constants {
 
     public static final String USER = "user";
@@ -12,6 +7,7 @@ public class Constants {
     public static final String CORRECT = "correct";
     public static final String INCORRECT = "incorrect";
     public static final String QUESTIONS = "questions";
+    public static final String QUESTIONS_DETAILS = "questions_details";
     public static final int QUESTION_SHOWING = 5;
 
     public static final int CORRECT_POINT = 5;

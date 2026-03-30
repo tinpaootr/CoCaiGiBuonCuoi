@@ -61,7 +61,7 @@ public final class UserDao_Impl implements UserDao {
       @Override
       @NonNull
       protected String createQuery() {
-        return "INSERT OR REPLACE INTO `attempt` (`createdTimeAttempt`,`subject`,`correct`,`incorrect`,`earned`,`email`,`overallPoints`) VALUES (?,?,?,?,?,?,?)";
+        return "INSERT OR REPLACE INTO `attempt` (`createdTimeAttempt`,`subject`,`correct`,`incorrect`,`earned`,`email`,`overallPoints`,`questionsJson`) VALUES (?,?,?,?,?,?,?,?)";
       }
 
       @Override
@@ -81,6 +81,11 @@ public final class UserDao_Impl implements UserDao {
           statement.bindString(6, entity.getEmail());
         }
         statement.bindLong(7, entity.getOverallPoints());
+        if (entity.getQuestionsJson() == null) {
+          statement.bindNull(8);
+        } else {
+          statement.bindString(8, entity.getQuestionsJson());
+        }
       }
     };
     this.__deletionAdapterOfUser = new EntityDeletionOrUpdateAdapter<User>(__db) {
@@ -243,6 +248,7 @@ public final class UserDao_Impl implements UserDao {
         final int _cursorIndexOfEarned = CursorUtil.getColumnIndexOrThrow(_cursor, "earned");
         final int _cursorIndexOfEmail = CursorUtil.getColumnIndexOrThrow(_cursor, "email");
         final int _cursorIndexOfOverallPoints = CursorUtil.getColumnIndexOrThrow(_cursor, "overallPoints");
+        final int _cursorIndexOfQuestionsJson = CursorUtil.getColumnIndexOrThrow(_cursor, "questionsJson");
         final List<Attempt> _result = new ArrayList<Attempt>(_cursor.getCount());
         while (_cursor.moveToNext()) {
           final Attempt _item;
@@ -270,6 +276,13 @@ public final class UserDao_Impl implements UserDao {
           final int _tmpOverallPoints;
           _tmpOverallPoints = _cursor.getInt(_cursorIndexOfOverallPoints);
           _item.setOverallPoints(_tmpOverallPoints);
+          final String _tmpQuestionsJson;
+          if (_cursor.isNull(_cursorIndexOfQuestionsJson)) {
+            _tmpQuestionsJson = null;
+          } else {
+            _tmpQuestionsJson = _cursor.getString(_cursorIndexOfQuestionsJson);
+          }
+          _item.setQuestionsJson(_tmpQuestionsJson);
           _result.add(_item);
         }
         __db.setTransactionSuccessful();
