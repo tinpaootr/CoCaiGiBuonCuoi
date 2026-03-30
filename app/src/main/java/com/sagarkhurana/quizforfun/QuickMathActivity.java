@@ -25,11 +25,17 @@ public class QuickMathActivity extends AppCompatActivity {
     private final long INITIAL_TIME = 5000; // 5 seconds per question
     private long currentTimeLeft;
     private Random random = new Random();
+    
+    private long sessionStartTime;
+    private int sessionMaxScore = 0;
+    private boolean isGameOver = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_quick_math);
+        
+        sessionStartTime = System.currentTimeMillis();
 
         tvScore = findViewById(R.id.tvScoreQuickMath);
         tvEquation = findViewById(R.id.tvEquationQuickMath);
@@ -55,10 +61,10 @@ public class QuickMathActivity extends AppCompatActivity {
 
         if (operation == 0) {
             result = a + b;
-            opStr = " + ";
+            opStr = "+";
         } else {
             result = a - b;
-            opStr = " - ";
+            opStr = "-";
         }
 
         isCorrectAnswer = random.nextBoolean();
@@ -68,7 +74,7 @@ public class QuickMathActivity extends AppCompatActivity {
             else result -= offset;
         }
 
-        tvEquation.setText(a + opStr + b + " = " + result);
+        tvEquation.setText(getString(R.string.quick_math_equation_format, a, opStr, b, result));
         startTimer();
     }
 
@@ -103,27 +109,58 @@ public class QuickMathActivity extends AppCompatActivity {
     }
 
     private void gameOver() {
-        if (countDownTimer != null) countDownTimer.cancel();
+        if (isGameOver) return;
+        isGameOver = true;
         
+        if (countDownTimer != null) countDownTimer.cancel();
+
+        if (score > sessionMaxScore) {
+            sessionMaxScore = score;
+        }
+        saveResult();
+
         new AlertDialog.Builder(this)
                 .setTitle(R.string.time_up)
-                .setMessage("Trò chơi kết thúc! Điểm của bạn: " + score)
+                .setMessage(getString(R.string.quick_math_game_over_message, score))
                 .setCancelable(false)
-                .setPositiveButton("Chơi lại", (dialog, which) -> {
+                .setPositiveButton(getString(R.string.play_again), (dialog, which) -> {
+                    isGameOver = false;
                     score = 0;
                     tvScore.setText(getString(R.string.score_text, score));
                     generateQuestion();
                 })
-                .setNegativeButton("Thoát", (dialog, which) -> finish())
+                .setNegativeButton(getString(R.string.exit), (dialog, which) -> finish())
                 .show();
+    }
+
+    private void saveResult() {
+        String email = com.sagarkhurana.quizforfun.other.SharedPref.getInstance().getUser(this).getEmail();
+        com.sagarkhurana.quizforfun.data.Attempt attempt = new com.sagarkhurana.quizforfun.data.Attempt(
+                sessionStartTime,
+                getString(R.string.quick_math),
+                sessionMaxScore,
+                1,
+                sessionMaxScore * 5,
+                email
+        );
+
+        new android.os.AsyncTask<Void, Void, Void>() {
+            @Override
+            protected Void doInBackground(Void... voids) {
+                com.sagarkhurana.quizforfun.data.UserDatabase databaseClient =
+                        com.sagarkhurana.quizforfun.data.UserDatabaseClient.getInstance(getApplicationContext());
+                databaseClient.userDao().insertAttempt(attempt);
+                return null;
+            }
+        }.execute();
     }
 
     private void showExitDialog() {
         new AlertDialog.Builder(this)
-                .setTitle("Thoát trò chơi?")
-                .setMessage("Bạn có chắc chắn muốn thoát không?")
-                .setPositiveButton("Thoát", (dialog, which) -> finish())
-                .setNegativeButton("Tiếp tục", null)
+                .setTitle(getString(R.string.exit_quick_math_title))
+                .setMessage(getString(R.string.exit_survival_message))
+                .setPositiveButton(getString(R.string.exit), (dialog, which) -> finish())
+                .setNegativeButton(getString(R.string.continue_text), null)
                 .show();
     }
 

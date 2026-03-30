@@ -107,7 +107,7 @@ public class GeographyOrLiteratureQuizActivity extends AppCompatActivity {
     private void checkAnswerAndNext(String subject) {
         int checkedId = radioGroup.getCheckedRadioButtonId();
         if (checkedId == -1) {
-            Toast.makeText(this, "Vui lòng chọn một đáp án!", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, getString(R.string.please_select_option), Toast.LENGTH_SHORT).show();
             return;
         }
         RadioButton radioButton = findViewById(checkedId);
@@ -160,15 +160,15 @@ public class GeographyOrLiteratureQuizActivity extends AppCompatActivity {
 
     private void showExitConfirmationDialog() {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setTitle("Thoát bài thi?");
-        builder.setMessage("Bạn có chắc chắn muốn thoát không? Tiến trình làm bài sẽ bị mất.");
-        builder.setPositiveButton("Thoát", new DialogInterface.OnClickListener() {
+        builder.setTitle(getString(R.string.exit_quiz_title));
+        builder.setMessage(getString(R.string.exit_quiz_message));
+        builder.setPositiveButton(getString(R.string.exit), new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
                 finish();
             }
         });
-        builder.setNegativeButton("Tiếp tục làm bài", null);
+        builder.setNegativeButton(getString(R.string.continue_quiz), null);
         builder.show();
     }
 
@@ -176,7 +176,7 @@ public class GeographyOrLiteratureQuizActivity extends AppCompatActivity {
         radioGroup.clearCheck();
         setAnswersToRadioButton();
         tvQuestion.setText(questions.get(currentQuestionIndex));
-        tvQuestionNumber.setText("Câu hỏi hiện tại: " + (currentQuestionIndex + 1));
+        tvQuestionNumber.setText(getString(R.string.current_question_format, currentQuestionIndex + 1));
         progressBar.setProgress(currentQuestionIndex + 1);
 
         if (currentQuestionIndex == questions.size() - 1) {
@@ -187,7 +187,7 @@ public class GeographyOrLiteratureQuizActivity extends AppCompatActivity {
 
     private void displayData() {
         tvQuestion.setText(questions.get(currentQuestionIndex));
-        tvQuestionNumber.setText("Câu hỏi hiện tại: " + (currentQuestionIndex + 1));
+        tvQuestionNumber.setText(getString(R.string.current_question_format, currentQuestionIndex + 1));
         progressBar.setProgress(currentQuestionIndex + 1);
         setAnswersToRadioButton();
         startCountDown();
@@ -210,7 +210,7 @@ public class GeographyOrLiteratureQuizActivity extends AppCompatActivity {
             @Override
             public void onTick(long millisUntilFinished) {
                 int seconds = (int) (millisUntilFinished / 1000);
-                tvTimer.setText(String.format(Locale.getDefault(), "%02ds", seconds));
+                tvTimer.setText(getString(R.string.timer_format, seconds));
                 if (seconds < 5) {
                     tvTimer.setTextColor(getResources().getColor(android.R.color.holo_red_light));
                 } else {
@@ -220,8 +220,8 @@ public class GeographyOrLiteratureQuizActivity extends AppCompatActivity {
 
             @Override
             public void onFinish() {
-                tvTimer.setText("00s");
-                Toast.makeText(GeographyOrLiteratureQuizActivity.this, "Hết giờ!", Toast.LENGTH_SHORT).show();
+                tvTimer.setText(getString(R.string.timer_zero));
+                Toast.makeText(GeographyOrLiteratureQuizActivity.this, getString(R.string.time_up), Toast.LENGTH_SHORT).show();
                 
                 Map<String, Boolean> answersMap = questionsAnswerMap.get(questions.get(currentQuestionIndex));
                 String correctAnswer = "";
@@ -231,7 +231,7 @@ public class GeographyOrLiteratureQuizActivity extends AppCompatActivity {
                         break;
                     }
                 }
-                questionResults.add(new QuestionResult(questions.get(currentQuestionIndex), correctAnswer, "Hết giờ", false));
+                questionResults.add(new QuestionResult(questions.get(currentQuestionIndex), correctAnswer, getString(R.string.timeout_text), false));
 
                 Intent intent = getIntent();
                 String subject = intent.getStringExtra(Constants.SUBJECT);

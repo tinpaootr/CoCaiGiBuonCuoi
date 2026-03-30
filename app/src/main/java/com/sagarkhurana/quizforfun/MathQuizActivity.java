@@ -84,15 +84,15 @@ public class MathQuizActivity extends AppCompatActivity {
 
     private void showExitConfirmationDialog() {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setTitle("Thoát bài thi?");
-        builder.setMessage("Bạn có chắc chắn muốn thoát không? Tiến trình làm bài sẽ bị mất.");
-        builder.setPositiveButton("Thoát", new DialogInterface.OnClickListener() {
+        builder.setTitle(getString(R.string.exit_quiz_title));
+        builder.setMessage(getString(R.string.exit_quiz_message));
+        builder.setPositiveButton(getString(R.string.exit), new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
                 finish();
             }
         });
-        builder.setNegativeButton("Tiếp tục làm bài", null);
+        builder.setNegativeButton(getString(R.string.continue_quiz), null);
         builder.show();
     }
 
@@ -100,7 +100,7 @@ public class MathQuizActivity extends AppCompatActivity {
         String answer = etAnswer.getText().toString();
 
         if (answer.isEmpty()){
-            Toast.makeText(MathQuizActivity.this, "Hãy nhập câu trả lời!", Toast.LENGTH_SHORT).show();
+            Toast.makeText(MathQuizActivity.this, getString(R.string.please_enter_answer), Toast.LENGTH_SHORT).show();
             return;
         }
 
@@ -111,7 +111,7 @@ public class MathQuizActivity extends AppCompatActivity {
             correctQuestion++;
         }
         
-        questionResults.add(new QuestionResult(questions.get(currentQuestionIndex) + " = ?", correctAnswer, answer, isCorrect));
+        questionResults.add(new QuestionResult(getString(R.string.question_format, questions.get(currentQuestionIndex)), correctAnswer, answer, isCorrect));
         
         goToNextQuestion();
     }
@@ -143,8 +143,8 @@ public class MathQuizActivity extends AppCompatActivity {
 
     private void displayNextQuestions() {
         etAnswer.setText("");
-        tvQuestion.setText(questions.get(currentQuestionIndex) + " = ?");
-        tvQuestionNumber.setText("Câu hỏi hiện tại: " + (currentQuestionIndex + 1));
+        tvQuestion.setText(getString(R.string.question_format, questions.get(currentQuestionIndex)));
+        tvQuestionNumber.setText(getString(R.string.current_question_format, currentQuestionIndex + 1));
         progressBar.setProgress(currentQuestionIndex + 1);
 
         if (currentQuestionIndex == Constants.QUESTION_SHOWING - 1) {
@@ -154,8 +154,8 @@ public class MathQuizActivity extends AppCompatActivity {
     }
 
     private void displayData() {
-        tvQuestion.setText(questions.get(currentQuestionIndex) + " = ?");
-        tvQuestionNumber.setText("Câu hỏi hiện tại: " + (currentQuestionIndex + 1));
+        tvQuestion.setText(getString(R.string.question_format, questions.get(currentQuestionIndex)));
+        tvQuestionNumber.setText(getString(R.string.current_question_format, currentQuestionIndex + 1));
         progressBar.setProgress(currentQuestionIndex + 1);
         startCountDown();
     }
@@ -168,7 +168,7 @@ public class MathQuizActivity extends AppCompatActivity {
             @Override
             public void onTick(long millisUntilFinished) {
                 int seconds = (int) (millisUntilFinished / 1000);
-                tvTimer.setText(String.format(Locale.getDefault(), "%02ds", seconds));
+                tvTimer.setText(getString(R.string.timer_format, seconds));
                 if (seconds < 5) {
                     tvTimer.setTextColor(getResources().getColor(android.R.color.holo_red_light));
                 } else {
@@ -178,11 +178,11 @@ public class MathQuizActivity extends AppCompatActivity {
 
             @Override
             public void onFinish() {
-                tvTimer.setText("00s");
-                Toast.makeText(MathQuizActivity.this, "Hết giờ!", Toast.LENGTH_SHORT).show();
+                tvTimer.setText(getString(R.string.timer_zero));
+                Toast.makeText(MathQuizActivity.this, getString(R.string.time_up), Toast.LENGTH_SHORT).show();
                 
                 String correctAnswer = questionsAnswerMap.get(questions.get(currentQuestionIndex));
-                questionResults.add(new QuestionResult(questions.get(currentQuestionIndex) + " = ?", correctAnswer, "Hết giờ", false));
+                questionResults.add(new QuestionResult(getString(R.string.question_format, questions.get(currentQuestionIndex)), correctAnswer, getString(R.string.timeout_text), false));
 
                 goToNextQuestion();
             }

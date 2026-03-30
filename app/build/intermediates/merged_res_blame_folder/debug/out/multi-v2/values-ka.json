@@ -4,7 +4,24 @@
             "outputFile": "com.sagarkhurana.quizforfun.app-mergeDebugResources-58:/values-ka/values-ka.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\ADMIN\\.gradle\\caches\\transforms-3\\2b09c2cd4192fe4b7b686a651ae8eff3\\transformed\\material-1.11.0\\res\\values-ka\\values-ka.xml",
+                    "source": "C:\\Users\\krisg\\.gradle\\caches\\transforms-3\\75919e89ab9acfe92b320b18b5eba894\\transformed\\core-1.9.0\\res\\values-ka\\values-ka.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    },
+                    "to": {
+                        "startLines": "116",
+                        "startColumns": "4",
+                        "startOffsets": "9849",
+                        "endColumns": "100",
+                        "endOffsets": "9945"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\krisg\\.gradle\\caches\\transforms-3\\2b09c2cd4192fe4b7b686a651ae8eff3\\transformed\\material-1.11.0\\res\\values-ka\\values-ka.xml",
                     "from": {
                         "startLines": "2,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -23,24 +40,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\ADMIN\\.gradle\\caches\\transforms-3\\55edaf98d94b7d0145d2762699bfe231\\transformed\\jetified-ui-1.4.0\\res\\values-ka\\values-ka.xml",
-                    "from": {
-                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "105,201,287,386,489,579,659,755,845,932,1003,1072,1161,1252,1324,1403,1473",
-                        "endColumns": "95,85,98,102,89,79,95,89,86,70,68,88,90,71,78,69,120",
-                        "endOffsets": "196,282,381,484,574,654,750,840,927,998,1067,1156,1247,1319,1398,1468,1589"
-                    },
-                    "to": {
-                        "startLines": "41,42,43,44,45,49,50,107,108,109,110,112,113,115,117,118,119",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "3761,3857,3943,4042,4145,4468,4548,9118,9208,9295,9366,9515,9604,9777,9950,10029,10099",
-                        "endColumns": "95,85,98,102,89,79,95,89,86,70,68,88,90,71,78,69,120",
-                        "endOffsets": "3852,3938,4037,4140,4230,4543,4639,9203,9290,9361,9430,9599,9690,9844,10024,10094,10215"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\ADMIN\\.gradle\\caches\\transforms-3\\1269e761ba2b2764df14d796e474c793\\transformed\\appcompat-1.6.1\\res\\values-ka\\values-ka.xml",
+                    "source": "C:\\Users\\krisg\\.gradle\\caches\\transforms-3\\1269e761ba2b2764df14d796e474c793\\transformed\\appcompat-1.6.1\\res\\values-ka\\values-ka.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -57,20 +57,20 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\ADMIN\\.gradle\\caches\\transforms-3\\75919e89ab9acfe92b320b18b5eba894\\transformed\\core-1.9.0\\res\\values-ka\\values-ka.xml",
+                    "source": "C:\\Users\\krisg\\.gradle\\caches\\transforms-3\\55edaf98d94b7d0145d2762699bfe231\\transformed\\jetified-ui-1.4.0\\res\\values-ka\\values-ka.xml",
                     "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "100",
-                        "endOffsets": "151"
+                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "105,201,287,386,489,579,659,755,845,932,1003,1072,1161,1252,1324,1403,1473",
+                        "endColumns": "95,85,98,102,89,79,95,89,86,70,68,88,90,71,78,69,120",
+                        "endOffsets": "196,282,381,484,574,654,750,840,927,998,1067,1156,1247,1319,1398,1468,1589"
                     },
                     "to": {
-                        "startLines": "116",
-                        "startColumns": "4",
-                        "startOffsets": "9849",
-                        "endColumns": "100",
-                        "endOffsets": "9945"
+                        "startLines": "41,42,43,44,45,49,50,107,108,109,110,112,113,115,117,118,119",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "3761,3857,3943,4042,4145,4468,4548,9118,9208,9295,9366,9515,9604,9777,9950,10029,10099",
+                        "endColumns": "95,85,98,102,89,79,95,89,86,70,68,88,90,71,78,69,120",
+                        "endOffsets": "3852,3938,4037,4140,4230,4543,4639,9203,9290,9361,9430,9599,9690,9844,10024,10094,10215"
                     }
                 }
             ]

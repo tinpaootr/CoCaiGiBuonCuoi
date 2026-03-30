@@ -1,6 +1,7 @@
 package com.sagarkhurana.quizforfun;
 
 import android.content.DialogInterface;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.view.View;
@@ -14,9 +15,14 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.material.progressindicator.LinearProgressIndicator;
+import com.sagarkhurana.quizforfun.data.Attempt;
+import com.sagarkhurana.quizforfun.data.UserDatabase;
+import com.sagarkhurana.quizforfun.data.UserDatabaseClient;
+import com.sagarkhurana.quizforfun.other.SharedPref;
 import com.sagarkhurana.quizforfun.other.Utils;
 
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.Collections;
 import java.util.List;
 import java.util.Locale;
@@ -37,10 +43,16 @@ public class SurvivalActivity extends AppCompatActivity {
     private CountDownTimer countDownTimer;
     private static final long COUNTDOWN_IN_MILLIS = 15000; // 15 seconds for survival
 
+    private long sessionStartTime;
+    private int sessionMaxScore = 0;
+    private boolean isGameOver = false;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_survival);
+
+        sessionStartTime = System.currentTimeMillis();
 
         initViews();
         loadQuestions();
@@ -128,10 +140,10 @@ public class SurvivalActivity extends AppCompatActivity {
 
         if (isCorrect) {
             score += 10;
-            Toast.makeText(this, "Chính xác! +10 điểm", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, getString(R.string.correct_plus_point), Toast.LENGTH_SHORT).show();
         } else {
             lives--;
-            Toast.makeText(this, "Sai rồi! -1 mạng", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, getString(R.string.incorrect_minus_life), Toast.LENGTH_SHORT).show();
         }
 
         if (lives <= 0) {
@@ -172,8 +184,8 @@ public class SurvivalActivity extends AppCompatActivity {
     }
 
     private void updateUI() {
-        tvScore.setText("Điểm: " + score);
-        tvLives.setText("Mạng: " + lives);
+        tvScore.setText(getString(R.string.score_text, score));
+        tvLives.setText(getString(R.string.lives_text, lives));
     }
 
     private void startCountDown() {
@@ -190,7 +202,7 @@ public class SurvivalActivity extends AppCompatActivity {
             public void onFinish() {
                 progressBar.setProgress(0);
                 lives--;
-                Toast.makeText(SurvivalActivity.this, "Hết thời gian! -1 mạng", Toast.LENGTH_SHORT).show();
+                Toast.makeText(SurvivalActivity.this, getString(R.string.timeout_minus_life), Toast.LENGTH_SHORT).show();
                 if (lives <= 0) {
                     gameOver();
                 } else {
@@ -202,13 +214,22 @@ public class SurvivalActivity extends AppCompatActivity {
     }
 
     private void gameOver() {
+        if (isGameOver) return;
+        isGameOver = true;
+
         if (countDownTimer != null) countDownTimer.cancel();
         
+        if (score > sessionMaxScore) {
+            sessionMaxScore = score;
+        }
+        saveResult();
+
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setTitle("Kết thúc!")
-               .setMessage("Bạn đã hết mạng.\nTổng điểm: " + score)
+        builder.setTitle(getString(R.string.game_over_title))
+               .setMessage(getString(R.string.game_over_message, score))
                .setCancelable(false)
-               .setPositiveButton("Chơi lại", (dialog, which) -> {
+               .setPositiveButton(getString(R.string.play_again), (dialog, which) -> {
+                   isGameOver = false;
                    score = 0;
                    lives = 3;
                    currentQuestionIndex = 0;
@@ -218,16 +239,45 @@ public class SurvivalActivity extends AppCompatActivity {
                    btnSkip.setAlpha(1.0f);
                    displayQuestion();
                })
-               .setNegativeButton("Thoát", (dialog, which) -> finish())
+               .setNegativeButton(getString(R.string.exit), (dialog, which) -> finish())
                .show();
+    }
+
+    private void saveResult() {
+        String email = SharedPref.getInstance().getUser(this).getEmail();
+        Attempt attempt = new Attempt(
+                sessionStartTime,
+                getString(R.string.survival_mode),
+                sessionMaxScore / 10,
+                3, // Giả sử tối đa 3 lỗi cho mỗi session
+                sessionMaxScore,
+                email
+        );
+
+        new SaveUserAttemptTask(attempt).execute();
+    }
+
+    private class SaveUserAttemptTask extends AsyncTask<Void, Void, Void> {
+        private final Attempt attempt;
+
+        public SaveUserAttemptTask(Attempt attempt) {
+            this.attempt = attempt;
+        }
+
+        @Override
+        protected Void doInBackground(Void... voids) {
+            UserDatabase databaseClient = UserDatabaseClient.getInstance(getApplicationContext());
+            databaseClient.userDao().insertAttempt(attempt);
+            return null;
+        }
     }
 
     private void showExitConfirmationDialog() {
         new AlertDialog.Builder(this)
-                .setTitle("Thoát chế độ sinh tồn?")
-                .setMessage("Bạn có chắc chắn muốn thoát không?")
-                .setPositiveButton("Thoát", (dialog, i) -> finish())
-                .setNegativeButton("Tiếp tục", null)
+                .setTitle(getString(R.string.exit_survival_title))
+                .setMessage(getString(R.string.exit_survival_message))
+                .setPositiveButton(getString(R.string.exit), (dialog, i) -> finish())
+                .setNegativeButton(getString(R.string.continue_text), null)
                 .show();
     }
 

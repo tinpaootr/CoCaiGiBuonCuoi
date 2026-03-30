@@ -76,4 +76,50 @@
     <string name="lifeline_5050">50/50</string>
     <string name="lifeline_skip">Đổi câu</string>
     <string name="survival_game_over">Kết thúc hành trình!</string>
+
+    <!-- Hardcoded strings from MathQuizActivity -->
+    <string name="exit_quiz_title">Thoát bài thi?</string>
+    <string name="exit_quiz_message">Bạn có chắc chắn muốn thoát không? Tiến trình làm bài sẽ bị mất.</string>
+    <string name="exit">Thoát</string>
+    <string name="continue_quiz">Tiếp tục làm bài</string>
+    <string name="please_enter_answer">Hãy nhập câu trả lời!</string>
+    <string name="question_format">%1$s = ?</string>
+    <string name="current_question_format">Câu hỏi hiện tại: %1$d</string>
+    <string name="timer_format">%1$02ds</string>
+    <string name="timer_zero">00s</string>
+    <string name="timeout_text">Hết giờ</string>
+
+    <!-- Hardcoded strings from MainActivity -->
+    <string name="welcome_user">Xin chào, %1$s</string>
+
+    <!-- Hardcoded strings from LoginActivity -->
+    <string name="user_not_exist">Tài khoản không tồn tại</string>
+
+    <!-- Hardcoded strings from RegisterActivity -->
+    <string name="user_created">Tạo tài khoản thành công!</string>
+    <string name="email_already_exists">Email này đã được sử dụng bởi người khác</string>
+
+    <!-- Hardcoded strings from GeographyOrLiteratureQuizActivity -->
+    <string name="please_select_option">Vui lòng chọn một đáp án!</string>
+
+    <!-- Hardcoded strings from SurvivalActivity -->
+    <string name="correct_plus_point">Chính xác! +10 điểm</string>
+    <string name="incorrect_minus_life">Sai rồi! -1 mạng</string>
+    <string name="timeout_minus_life">Hết thời gian! -1 mạng</string>
+    <string name="game_over_title">Kết thúc!</string>
+    <string name="game_over_message">Bạn đã hết mạng.\nTổng điểm: %1$d</string>
+    <string name="play_again">Chơi lại</string>
+    <string name="exit_survival_title">Thoát chế độ sinh tồn?</string>
+    <string name="exit_survival_message">Bạn có chắc chắn muốn thoát không?</string>
+    <string name="continue_text">Tiếp tục</string>
+
+    <!-- Hardcoded strings from QuickMathActivity -->
+    <string name="quick_math_game_over_message">Trò chơi kết thúc! Điểm của bạn: %1$d</string>
+    <string name="exit_quick_math_title">Thoát trò chơi?</string>
+    <string name="quick_math_equation_format">%1$d %2$s %3$d = %4$d</string>
+
+    <!-- Hardcoded strings from EditPasswordActivity -->
+    <string name="enter_right_password">Vui lòng nhập mật khẩu chính xác</string>
+    <string name="password_updated_successfully">Cập nhật mật khẩu thành công!</string>
+
 </resources>

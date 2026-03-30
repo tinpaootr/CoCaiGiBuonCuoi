@@ -24,26 +24,41 @@
     <string name="app_name">Đố Vui</string>
     <string name="confirm_new_password">Xác nhận mật khẩu mới</string>
     <string name="confirm_new_password_cannot_be_empty">Xác nhận mật khẩu mới không được để trống</string>
+    <string name="continue_quiz">Tiếp tục làm bài</string>
+    <string name="continue_text">Tiếp tục</string>
     <string name="correct">Đúng :</string>
+    <string name="correct_plus_point">Chính xác! +10 điểm</string>
     <string name="create">Tạo</string>
     <string name="create_account">Tạo tài khoản</string>
+    <string name="current_question_format">Câu hỏi hiện tại: %1$d</string>
     <string name="date">Ngày :</string>
     <string name="don_t_have_an_account">Chưa có tài khoản?</string>
     <string name="earned">Điểm đạt được :</string>
     <string name="edit_password">Đổi mật khẩu</string>
     <string name="email">Email</string>
+    <string name="email_already_exists">Email này đã được sử dụng bởi người khác</string>
     <string name="email_cannot_empty">Email không được để trống</string>
     <string name="email_not_valid">Email không hợp lệ</string>
     <string name="enter_answer">Nhập câu trả lời</string>
+    <string name="enter_right_password">Vui lòng nhập mật khẩu chính xác</string>
+    <string name="exit">Thoát</string>
+    <string name="exit_quick_math_title">Thoát trò chơi?</string>
+    <string name="exit_quiz_message">Bạn có chắc chắn muốn thoát không? Tiến trình làm bài sẽ bị mất.</string>
+    <string name="exit_quiz_title">Thoát bài thi?</string>
+    <string name="exit_survival_message">Bạn có chắc chắn muốn thoát không?</string>
+    <string name="exit_survival_title">Thoát chế độ sinh tồn?</string>
     <string name="false_text">Sai</string>
     <string name="final_result">Kết quả cuối cùng</string>
     <string name="finish">Kết thúc</string>
+    <string name="game_over_message">Bạn đã hết mạng.\nTổng điểm: %1$d</string>
+    <string name="game_over_title">Kết thúc!</string>
     <string name="geography">Địa lý</string>
     <string name="geography_quiz">Đố vui Địa lý</string>
     <string name="history">Lịch sử</string>
     <string name="history_quiz">Đố vui Lịch sử</string>
     <string name="history_subject">Lịch sử</string>
     <string name="incorrect">Sai :</string>
+    <string name="incorrect_minus_life">Sai rồi! -1 mạng</string>
     <string name="lifeline_5050">50/50</string>
     <string name="lifeline_skip">Đổi câu</string>
     <string name="literature">Văn học</string>
@@ -65,7 +80,14 @@
     <string name="password">Mật khẩu</string>
     <string name="password_cannot_empty">Mật khẩu không được để trống</string>
     <string name="password_must_be_same">Mật khẩu phải trùng khớp</string>
+    <string name="password_updated_successfully">Cập nhật mật khẩu thành công!</string>
+    <string name="play_again">Chơi lại</string>
+    <string name="please_enter_answer">Hãy nhập câu trả lời!</string>
+    <string name="please_select_option">Vui lòng chọn một đáp án!</string>
+    <string name="question_format">%1$s = ?</string>
     <string name="quick_math">Toán nhanh</string>
+    <string name="quick_math_equation_format">%1$d %2$s %3$d = %4$d</string>
+    <string name="quick_math_game_over_message">Trò chơi kết thúc! Điểm của bạn: %1$d</string>
     <string name="quiz_option">Tùy chọn bài thi</string>
     <string name="register">Đăng ký</string>
     <string name="rule">Quy định</string>
@@ -90,12 +112,19 @@
     <string name="survival_game_over">Kết thúc hành trình!</string>
     <string name="survival_mode">Sinh tồn</string>
     <string name="time_up">Hết giờ!</string>
+    <string name="timeout_minus_life">Hết thời gian! -1 mạng</string>
+    <string name="timeout_text">Hết giờ</string>
+    <string name="timer_format">%1$02ds</string>
+    <string name="timer_zero">00s</string>
     <string name="total_questions">Tổng số câu hỏi :</string>
     <string name="true_false_quiz">Đúng hay Sai</string>
     <string name="true_text">Đúng</string>
+    <string name="user_created">Tạo tài khoản thành công!</string>
+    <string name="user_not_exist">Tài khoản không tồn tại</string>
     <string name="username">Tên đăng nhập</string>
     <string name="username_cannot_empty">Tên đăng nhập không được để trống</string>
     <string name="welcome_back">Chào mừng trở lại!</string>
+    <string name="welcome_user">Xin chào, %1$s</string>
     <style name="MyAppearance" parent="TextAppearance.AppCompat">
         <item name="android:textColor">@color/peach</item>
     </style>

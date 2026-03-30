@@ -56,7 +56,7 @@ public class EditPasswordActivity extends AppCompatActivity {
 
         User user = SharedPref.getInstance().getUser(this);
         if (!user.getPassword().equals(oldPassword)){
-            Toast.makeText(this, "Please enter the right password", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, getString(R.string.enter_right_password), Toast.LENGTH_SHORT).show();
             return;
         }
         user.setPassword(newPassword);
@@ -73,12 +73,12 @@ public class EditPasswordActivity extends AppCompatActivity {
         }
 
         if (newPassword.isEmpty()){
-            Toast.makeText(this, getString(R.string.old_password_cannot_be_empty), Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, getString(R.string.new_password_cannot_be_empty), Toast.LENGTH_SHORT).show();
             return false;
         }
 
         if (confirmNewPassword.isEmpty()){
-            Toast.makeText(this, getString(R.string.old_password_cannot_be_empty), Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, getString(R.string.confirm_new_password_cannot_be_empty), Toast.LENGTH_SHORT).show();
             return false;
         }
 
@@ -113,7 +113,7 @@ public class EditPasswordActivity extends AppCompatActivity {
         @Override
         protected void onPostExecute(Void aVoid) {
             super.onPostExecute(aVoid);
-            Toast.makeText(EditPasswordActivity.this, "Password Updated Successfully!", Toast.LENGTH_SHORT).show();
+            Toast.makeText(EditPasswordActivity.this, getString(R.string.password_updated_successfully), Toast.LENGTH_SHORT).show();
             SharedPref.getInstance().setUser(EditPasswordActivity.this,user);
             finish();
         }

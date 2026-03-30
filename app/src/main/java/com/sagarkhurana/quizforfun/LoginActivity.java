@@ -113,11 +113,9 @@ public class LoginActivity extends AppCompatActivity {
                     return;
                 }
             }
-            Toast.makeText(LoginActivity.this, "User not exist", Toast.LENGTH_SHORT).show();
+            Toast.makeText(LoginActivity.this, getString(R.string.user_not_exist), Toast.LENGTH_SHORT).show();
 
         }
     }
 
 }
-
-

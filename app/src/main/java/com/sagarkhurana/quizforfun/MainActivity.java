@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
 
         SharedPref sharedPref = SharedPref.getInstance();
         User user = sharedPref.getUser(this);
-        tvUsername.setText("Xin chào, " + user.getUsername());
+        tvUsername.setText(getString(R.string.welcome_user, user.getUsername()));
 
         cvStartQuiz.setOnClickListener(new View.OnClickListener() {
             @Override

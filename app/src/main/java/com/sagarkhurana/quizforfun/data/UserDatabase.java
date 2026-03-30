@@ -13,7 +13,7 @@ import com.sagarkhurana.quizforfun.other.Convertor;
 @Database(
 entities = {User.class,Attempt.class},
         exportSchema = false,
-        version = 1
+        version = 2
 )
 public abstract class UserDatabase extends RoomDatabase {
 
